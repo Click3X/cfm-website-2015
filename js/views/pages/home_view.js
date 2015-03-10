@@ -10,12 +10,16 @@ define([
 			var _t = this;
 
 			var video_el = _t.$el.find("#reel-video.cfm-videoplayer")[0];
-			var video_url = base_url + "video/" + video_el.getAttribute("data-video-name") + ".mp4";
+			var video_url = base_url + "video/" + video_el.getAttribute("data-video-name");
+			video_url += mp4 ? ".mp4" : ".webm";
+			
 			var poster_url = video_el.getAttribute("data-poster");
 
 			this.videoplayer = new VideoPlayerView({el:video_el});
 
-			this.videoplayer.load( video_url, "mp4", poster_url );
+			console.log("videoplayer ", mp4);
+
+			this.videoplayer.load( video_url, mp4 ? "mp4" : "webm", poster_url );
 		},
 		onclose:function(){
 			this.videoplayer.remove();

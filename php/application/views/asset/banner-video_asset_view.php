@@ -3,7 +3,7 @@
 		<h2><?php echo $asset->title; ?></h2>
 	</div>
 </div>
-<div class="cfm-videoplayer project-asset-video" data-video="http://media.click3x.com/video/<?php echo $asset->media[0]->filename; ?>.mp4" data-poster="<?php echo base_url().'img/assets/'.$asset->media[0]->filename; ?>.jpg">
+<div class="cfm-videoplayer project-asset-video" data-video="http://media.click3x.com/video/<?php echo $asset->media[0]->filename; ?>" data-poster="<?php echo base_url().'img/assets/'.$asset->media[0]->filename; ?>.jpg">
     <div class="cfm-videoplayer-inner">
         <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
         <div class="cfm-videoplayer-poster">

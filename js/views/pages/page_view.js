@@ -49,13 +49,19 @@ define([
 			
 			$("#page-container").delay(300).animate({opacity:1},400);
 			$("#footer-container").delay(700).animate({opacity:1},400);
+
+			console.log("page ready");
 		},
 		buildprojectgalleries:function(){
+			console.log("build project galleries");
+
 			var _t = this;
 
 			_t.project_galleries = [];
 
 			$(".cfm-project-gallery").each( function( i, _el ){
+				console.log("building gallery ", i);
+				
 				var project_gallery = new ProjectGalleryView( {
 				  id:_el.getAttribute("id"), el:_el
 				});
