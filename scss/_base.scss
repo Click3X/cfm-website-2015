@@ -376,6 +376,9 @@ div.cfm-project-gallery{
 		.cfm-videoplayer-playbutton{
 			span.arrow{
 			}
+			span.label{
+				display: none;
+			}
 		}
 		&:hover{
 			.cfm-videoplayer-playbutton{

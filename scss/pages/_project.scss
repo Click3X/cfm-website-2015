@@ -2,61 +2,7 @@
  * Project Detail Page Styles
  */
 
- #project-page{
- 	.cfm-videoplayer{
-		video{
-			background:#FFF;
-		}
-
-		.cfm-videoplayer-poster{
-			.cfm-videoplayer-playbutton{
-				padding:0 24px 0 0;
-				border:1px solid $cfmred;
-				border-radius:0;
-				width:auto;
-				height: auto;
-				background:#FFF;
-				top: 50%; left: 50%;
-  				margin-left: -130px; margin-top: -32px;
-
-				span.arrow{
-					position: static;
-					border-top: 10px solid transparent;
-					border-bottom: 10px solid transparent;
-					border-left: 14px solid #AAA;
-					margin:-3px 0 0 24px;
-					display: inline-block;
-					vertical-align: middle;
-				}
-			
-				span.label{
-					background-color:$cfmred;
-					padding:0 20px 0 20px;
-					display: inline-block;
-					line-height: 20px;
-					font-size:14px;
-					line-height: 60px;
-					color: #FFF;
-					font-family: "gotham-book";
-				}
-			}
-
-			&:hover{
-				.cfm-videoplayer-playbutton{
-					// background:$cfmred;
-
-					span.arrow{
-						border-left: 14px solid $cfmred;
-					}
-				
-					span.label{
-						color: #FFF;
-					}
-				}
-			}
-		}
-	}
-
+#project-page{
 	.project-asset-image{
 		background-size:cover;
 		background-repeat:no-repeat;
@@ -244,4 +190,62 @@
 			}
 		}
 	}
+}
+
+html:not(.mobile){
+	#project-page{
+	 	.cfm-videoplayer{
+			video{
+				background:#FFF;
+			}
+
+			.cfm-videoplayer-poster{
+				.cfm-videoplayer-playbutton{
+					padding:0 24px 0 0;
+					border:1px solid $cfmred;
+					border-radius:0;
+					width:auto;
+					height: auto;
+					background:#FFF;
+					top: 50%; left: 50%;
+	  				margin-left: -130px; margin-top: -32px;
+
+					span.arrow{
+						position: static;
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent;
+						border-left: 14px solid #AAA;
+						margin:-3px 0 0 24px;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				
+					span.label{
+						background-color:$cfmred;
+						padding:0 20px 0 20px;
+						display: inline-block;
+						line-height: 20px;
+						font-size:14px;
+						line-height: 60px;
+						color: #FFF;
+						font-family: "gotham-book";
+					}
+				}
+
+				&:hover{
+					.cfm-videoplayer-playbutton{
+						// background:$cfmred;
+
+						span.arrow{
+							border-left: 14px solid $cfmred;
+						}
+					
+						span.label{
+							color: #FFF;
+						}
+					}
+				}
+			}
+		}
+ 	}
 }
