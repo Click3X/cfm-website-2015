@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'r2b';
-$db['default']['password'] = 'r2b1234';
-$db['default']['database'] = 'r2b';
+$db['default']['username'] = 'cfm2014';
+$db['default']['password'] = 'cfm2014';
+$db['default']['database'] = 'cfm';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
