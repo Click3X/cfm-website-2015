@@ -10,7 +10,7 @@
 		@media( min-width:$tablet-small){ padding-bottom:95%; }
 		@media( min-width:$tablet-large){ padding-bottom:64%; }
 		@media( min-width:$desktop){ padding-bottom:56.25%; }
-		@media( min-width:$desktop-large){ padding-bottom:42%; }
+		@media( min-width:$desktop-large){ padding-bottom:52%; }
 	}
 
 	video{
@@ -221,15 +221,6 @@
 		}
 	}
 }
-
-// .ipad{
-// 	.cfm-videoplayer{
-// 		div.cfm-video-controls{
-// 			opacity: 1 !important;
-// 		}
-// 	}
-// }
-
 
 
 

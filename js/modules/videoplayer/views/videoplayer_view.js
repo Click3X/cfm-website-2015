@@ -10,13 +10,11 @@ define([
             _t.video                        = _t.$el.find( "video.cfm-videoplayer-desktop" )[0];
             _t.mobile_video                 = _t.$el.find( "video.cfm-videoplayer-mobile" )[0];
 
-            if(ipad == false){
+            if(ipad == false && mobile == false){
                 _t.autoplay                     = _t.el.hasAttribute( "autoplay" );
                 _t.loop                         = _t.el.hasAttribute( "loop" );
                 _t.nocontrols                   = _t.el.hasAttribute( "nocontrols" );
-            }
 
-            if(mobile == false){
                 if( _t.autoplay )   _t.$el.addClass( "autoplay" ); 
                 if( _t.loop )       _t.$el.addClass( "loop" ); 
             }
