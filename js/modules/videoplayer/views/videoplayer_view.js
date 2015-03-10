@@ -10,9 +10,11 @@ define([
             _t.video                        = _t.$el.find( "video.cfm-videoplayer-desktop" )[0];
             _t.mobile_video                 = _t.$el.find( "video.cfm-videoplayer-mobile" )[0];
 
-            _t.autoplay                     = _t.el.hasAttribute( "autoplay" );
-            _t.loop                         = _t.el.hasAttribute( "loop" );
-            _t.nocontrols                   = _t.el.hasAttribute( "nocontrols" );
+            if(ipad == false){
+                _t.autoplay                     = _t.el.hasAttribute( "autoplay" );
+                _t.loop                         = _t.el.hasAttribute( "loop" );
+                _t.nocontrols                   = _t.el.hasAttribute( "nocontrols" );
+            }
 
             if(mobile == false){
                 if( _t.autoplay )   _t.$el.addClass( "autoplay" ); 
@@ -43,7 +45,7 @@ define([
                 }
             });
 
-            if(mobile == false){
+            if(mobile == false && ipad == false){
                 window.addEventListener("resize", function(){
                     clearTimeout( _t.resizeTO );
 

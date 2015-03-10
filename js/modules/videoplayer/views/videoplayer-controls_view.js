@@ -19,7 +19,7 @@ define([
         	var _t = this;
 
             // Event listener for the play/pause button
-            $(_t.playButton).click(function() {
+            $(_t.playButton).mousedown(function() {
                 if (_t.video_el.paused == true) {
                     _t.video_el.play();
                 } else {
@@ -55,8 +55,6 @@ define([
                 _t.video_el.currentTime = time;
             });
 
-            console.log("video el: ", _t.video_el);
-            
             $(_t.video_el).on("mousemove", function() {
             	clearTimeout(_t.hidecontrolsto);
                 clearTimeout(_t.showcontrolsto);
@@ -109,6 +107,8 @@ define([
 
 			if( !$(this.playButton).hasClass("active") )
 				$(this.playButton).addClass("active");
+
+            if(ipad == true) this.showControls();
 		},
 		toPausedState:function(){
 			this.playing = false;
@@ -131,7 +131,7 @@ define([
 		hideControls:function(){
 			console.log("hide", this.playing);
 
-			if(this.playing)
+			if(this.playing && ipad == false)
 				this.el.style.opacity = "0";
 		}
 	});
