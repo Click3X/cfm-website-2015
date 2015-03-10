@@ -1,0 +1,29 @@
+/**
+ * Home Page Styles
+ */
+
+  div#home-page{
+ 	div.cfm-project-gallery{
+		ul{
+	 		li{
+				div.project-inner{
+		 			a{
+		 				div.project-label{
+		 					div.project-label-inner{
+		 						h3{
+		 						}
+		 					}
+		 				}
+
+		 				&:hover{
+		 					div.project-label{
+			 					div.project-label-inner{
+			 					}
+			 				}
+		 				}
+	 				}	
+	 			}
+	 		}
+	 	}
+	 }
+}
