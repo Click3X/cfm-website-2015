@@ -6,16 +6,67 @@
 	 		<p>Headquartered in a 23,000 square foot state-of-the-art studio, our impressive in-house resources allow us to incorporate everything from live action, animation, sound design and visual FX into digital experiences that create purposeful solutions for agencies and brands with a mobile-first approach.</p>
 			<p>Our expert team consists of a diverse group of over 100 multi-talented individuals who embody left- and right brain disciplines. We are Strategists, Information Architects, UX Designers, Visual Effect Specialists, Animators, Creative Technologists, Editors, Directors and Producers.</p>
 			<p>Our approach is to fuel curiosity, spark conversation and direct change; ultimately shaping the digital landscape by creating original, solutions-driven experiences for our clients.</p>
-			<p>Why not start a conversation with us today.</p>
+			<p>Why not <a href="mailto:info@clickfiremedia.com">start a conversation</a> with us today.</p>
 		</div>	
 	</div></div>
-	<div class="cfm-project-gallery what-we-do">
-		<ul>
-			<li><div class="project-inner"><a><h2>Planning</h2><p>cross-platform strategy, brand development, PR + communications, influencer outreach, strategic partnerships</p></a></div></li>
-			<li><div class="project-inner"><a><h2>Design + Creative</h2><p>concepting and executing content for digital, print, broadcast, social and mobile platforms</p></a></div></li>
-			<li><div class="project-inner"><a><h2>Production</h2><p>25-thousand square foot studio housing an extraordinary group of designers, directors and animators</p></a></div></li>
-			<li><div class="project-inner"><a><h2>Digital Marketing</h2><p>Integrated content marketing, amplification, targeted paid media distribution, asset development, community management</p></a></div></li>
-			<li><div class="project-inner"><a><h2>Analytics + Reporting</h2><p>data-driven business and consumer insights</p></a></div></li>
-		</ul>
+	<div class="section-header">
+		<h2>Our Services</h2>
+	</div>
+	<div class="services">
+		<div class="services-section">
+			<h2>Technology</h2>
+			<ul>
+				<li>Mobile Applications</li>
+				<li>Cross-Platform Development</li>
+				<li>Websites</li>
+				<li>Ecommerce</li>
+				<li>Database Integration</li>
+				<li>Content Management Systems</li>
+				<li>Augmented Reality</li>
+				<li>Emerging Technology and Innovations</li>
+				<li>Experiential</li>
+				<li>Social Media Integration</li>
+			</ul>
+		</div>
+		<div class="services-section">
+			<h2>Digital Marketing & Advertising</h2>
+		</div>
+ 		<div class="services-section">
+			<h2>Mobile</h2>
+			<ul>
+				<li>Application Development</li></li>
+				<li>Gamification</li>
+				<li>Websites</li>
+				<li>Advertising: iAds, HTML5, Flash</li>
+			</ul>
+		</div>
+		<div class="services-section">
+			<h2>Interactive & UX Design</h2>
+		</div>
+	 	<div class="services-section">
+			<h2>Social Media</h2>
+			<ul>
+				<li>Application Development</li>
+				<li>Content Strategy & Planning</li>
+				<li>Community Management</li>
+				<li>Campaign Activations</li>
+			</ul>
+		</div>
+		<div class="services-section">
+			<h2>Information Architecture</h2>
+		</div>
+		<div class="services-section">
+			<h2>Content Creation & Management</h2>
+			<ul>
+				<li>Live Action</li>
+				<li>Post Production Editing</li>
+				<li>2D & 3D Animation</li>
+				<li>VisualFX</li>
+				<li>Audio Soundtracks</li>
+				<li>Color Correction</li>
+				<li>Publishing Management</li>
+				<li>Content Development</li>
+			</ul>
+		</div>
 	</div>
 </div>

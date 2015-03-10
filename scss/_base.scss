@@ -90,6 +90,7 @@ a:hover{
 				margin:0; padding:0;
 				opacity:0; text-align: right;
 				line-height:48px;
+				text-transform: uppercase;
 
 				@include prefix( "transition", opacity .4s);
 
@@ -259,41 +260,43 @@ a:hover{
 }
 
 div.section-header{
+	background-color:#FFF;
+
 	h2{
-		font-family: "calluna";
-		margin-bottom: 8px;
-		font-size: 30px;
-		line-height: 34px;
-		background-color:#FFF;
-		color: #666;
-		padding:60px 0 60px 0;
+		text-transform: uppercase;
+		font-family: "gotham-light";
+		font-size: 19px;
+		line-height: 24px;
+		color: #555;
+		padding:40px 0 40px 0;
 		text-align: center;
 	}
 }
 
 div.cfm-project-gallery{
 	margin:0 0 0 0;
-	padding:1px 0;
+	padding:0 0;
 	background: transparent;
 	border:none;
 
 	ul{
-		margin:0 -1px 0 -1px;
+		margin:0;
 
 		li{
 			@media( min-width:$tablet-small){ width:50%; }
  			@media( min-width:$tablet-large){ width:33.33334%; }
 
 			div.project-inner{
-				padding:1px;
+				padding:0;
 
  				a{
  					background-size:100.5%;
+ 					background-color: #FFF;
 
  					@include prefix( "transition", background .25s ease-in-out );
 
  					div.project-label{
- 						background-color:rgba(170, 0, 0, 0.6);
+ 						background-color:#FFF;
  						opacity: 0;
 
  						@include prefix( "transform", scale(.9) );
@@ -314,7 +317,7 @@ div.cfm-project-gallery{
  								font-family: "gotham-bold";
  								line-height: 26px;
  								text-transform: uppercase;
- 								color: #EEE;
+ 								color: $cfmred;
 
  								font-size: 26px;
 
@@ -326,9 +329,8 @@ div.cfm-project-gallery{
 					}
 
 					&:hover{
-						background-color: $cfmred;
- 						background-blend-mode:multiply;
- 						background-size:105%;
+ 						// background-blend-mode:multiply;
+ 						// background-size:105%;
 
 						div.project-label{
 							opacity: 1;
@@ -337,10 +339,6 @@ div.cfm-project-gallery{
 
 	 						div.project-label-inner{
 	 							@include prefix( "transform", scale(1) );
-
-	 							h2{
-	 								color: #FFF;
-	 							}
 	 						}
 						}
 					}

@@ -32,17 +32,18 @@
 
 					
 				h2{
-					font-family: "calluna";
+					font-family: "gotham-bold";
 					color: $cfmred;
 					margin-bottom: 8px;
 					font-size: 24px;
 					line-height: 30px;
 				}
 				h1{
-					font-family: "calluna";
-					color: #666;
-					font-size: 38px;
+					font-family: "gotham-light";
+					color: #777;
+					font-size: 36px;
 					line-height: 44px;
+					letter-spacing: -1px;
 				}
 			}
 			
@@ -206,15 +207,19 @@ html:not(.mobile){
 					width:auto;
 					height: auto;
 					background:#FFF;
-					top: 50%; left: 50%;
-	  				margin-left: -130px; margin-top: -32px;
+					top: 20px; left: 20px;
+	  				margin:0;
+
+	  				@media(min-width:$tablet-small){
+	  					top: 40px; left: 40px;
+	  				}
 
 					span.arrow{
 						position: static;
 						border-top: 10px solid transparent;
 						border-bottom: 10px solid transparent;
-						border-left: 14px solid #AAA;
-						margin:-3px 0 0 24px;
+						border-left: 14px solid #444;
+						margin:-1px 0 0 24px;
 						display: inline-block;
 						vertical-align: middle;
 					}
@@ -223,9 +228,8 @@ html:not(.mobile){
 						background-color:$cfmred;
 						padding:0 20px 0 20px;
 						display: inline-block;
-						line-height: 20px;
-						font-size:14px;
-						line-height: 60px;
+						font-size:13px;
+						line-height: 50px;
 						color: #FFF;
 						font-family: "gotham-book";
 					}
@@ -233,8 +237,6 @@ html:not(.mobile){
 
 				&:hover{
 					.cfm-videoplayer-playbutton{
-						// background:$cfmred;
-
 						span.arrow{
 							border-left: 14px solid $cfmred;
 						}

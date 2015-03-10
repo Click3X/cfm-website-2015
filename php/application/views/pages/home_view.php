@@ -20,7 +20,7 @@
 	    </div>
 	</div>
 	<div class="section-header">
-		<h2>Featured Work</h2>
+		<h2>FEATURED WORK</h2>
 	</div>
 	<div class="cfm-project-gallery">
 		<ul>
@@ -34,5 +34,8 @@
 			</li>
 			<?php endforeach; ?>
 		</ul>
+	</div>
+	<div class="section-header">
+		<h2>OUR 2015 REEL</h2>
 	</div>
 </div>
