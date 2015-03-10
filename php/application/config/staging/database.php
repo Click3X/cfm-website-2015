@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'cfm2014';
-$db['default']['password'] = 'cfm2014';
+$db['default']['username'] = 'cfm2015';
+$db['default']['password'] = 'cfm2015';
 $db['default']['database'] = 'cfm';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
