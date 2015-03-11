@@ -45,12 +45,40 @@ a:hover{
 	color:#222;
 }
 
+.video-anchor-link{
+	position: absolute;
+	bottom:80px;
+	left:0; width:100%;
+	text-align:center;
+	z-index:5;
+
+	a{
+		text-decoration: none;
+		display: block;
+
+		span.arrow{
+			border-top: 10px solid #DDD;
+			border-right: 8px solid transparent;
+			border-left: 8px solid transparent;
+			margin:0 0 0 -5px;
+			display: inline-block;
+		}
+
+		span.label{
+			line-height: 14px;
+			display: block;
+			color:#FFF;
+			font-family: "gotham-light";
+		}
+	}
+}
+
 #header-container{
 	position:fixed;
 	width:100%;
 	top:0;
 	background:$cfmred;
-	z-index:5;
+	z-index:6;
 
 	@include clearfix();
 

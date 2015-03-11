@@ -6,6 +6,8 @@ define([
         initialize:function(options){
             var _t = this;
 
+            _t.id = _t.el.getAttribute("id");
+
             _t.poster                       = _t.$el.find( "div.cfm-videoplayer-poster" )[0];
             _t.video                        = _t.$el.find( "video.cfm-videoplayer-desktop" )[0];
             _t.mobile_video                 = _t.$el.find( "video.cfm-videoplayer-mobile" )[0];
@@ -77,6 +79,8 @@ define([
                 this.video.play();
                 this.toPlayingState();
             }
+
+            this.trigger("play");
         },
         pause:function(){
             if( mobile == true ){
@@ -152,15 +156,38 @@ define([
 
             if( _poster ) _t.loadposter( _poster );
         },
+        reset:function(){
+            var _t = this;
+
+            if(this.playing){
+                _t.video.pause();
+
+                _t.video.currentTime = 0;
+                if(_t.controls) _t.controls.ontimeupdate(0);
+
+                setTimeout(function(){
+                    _t.autoplay         = false;
+                    _t.loop             = false;
+                    _t.nocontrols       = false;
+
+                    _t.$el.removeClass("loop");
+                    _t.$el.removeClass("autoplay");
+                    _t.$el.removeClass("nocontrols");
+                    _t.$el.removeClass("paused");
+                },500);
+            }
+        },
         toPausedState:function(){
-             this.$el.removeClass("playing");
-             if( !this.$el.hasClass("paused") )  this.$el.addClass("paused");
-             if(this.controls) this.controls.toPausedState();
+            this.playing = false;
+            this.$el.removeClass("playing");
+            if( !this.$el.hasClass("paused") )  this.$el.addClass("paused");
+            if(this.controls) this.controls.toPausedState();
         },
         toPlayingState:function(){
-             this.$el.removeClass("paused");
-             if( !this.$el.hasClass("playing") )  this.$el.addClass("playing");
-             if(this.controls) this.controls.toPlayingState();
+            this.playing = true;
+            this.$el.removeClass("paused");
+            if( !this.$el.hasClass("playing") )  this.$el.addClass("playing");
+            if(this.controls) this.controls.toPlayingState();
         },
         loadposter:function( _url ){
             var _t = this, img = new Image();

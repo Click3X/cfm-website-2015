@@ -71,6 +71,13 @@ require([
 
         if(!mobile) disablepointeronscroll();
 
+        $('a[href*=#]').on('click', function(event){     
+            event.preventDefault();
+            $('body').animate( {scrollTop: ($(this.hash).offset().top-50) + "px"} , 500);
+
+            console.log("anchor clicked",$(this.hash).offset().top);
+        });
+
         /*----- init router ------*/
         router = new Router();
     });

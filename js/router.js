@@ -58,7 +58,7 @@ define([
 
       $(document.documentElement).removeClass("menu-open");
       $(window).scrollTop(0);
-      $(".site-wrapper").scrollTop(0);
+      // $(".site-wrapper").scrollTop(0);
       
       $("#footer-container").css("opacity",0);
       if( !firstpage ) $("#page-container").css( {opacity:0} );
