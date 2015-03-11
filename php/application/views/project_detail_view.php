@@ -18,6 +18,7 @@
 		<div class="project-heading-inner">
 			<h2><?php echo $data->heading; ?></h2>
 			<h1><?php echo $data->subhead; ?></h1>
+			<?php if( count($assets) > 1): ?><div class="video-anchor-link"><a href="#<?php echo $data->slug; ?>-video"><span class="arrow"></span><span class="label">Watch Case Study</span></a></div><?php endif; ?>
 		</div>
 	</div>
 	<div class="featured-asset">

@@ -6,10 +6,10 @@
  	padding:0;
 
  	div.section-header{
- 		background-color:#444;
+ 		background-color:rgba(240,240,240,1);
 
  		h2{
- 			color: #AAA;
+ 			color:#555;
 	 	}
  	}
 
@@ -36,7 +36,8 @@
        		}
 
        		&:nth-child(even){
-       			background-color: rgba(240,240,240,1);
+       			border-top:1px solid #eee;
+       			border-bottom:1px solid #eee;
 
        			h2{
 		    	}

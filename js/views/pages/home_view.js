@@ -15,10 +15,6 @@ define([
 				poster = this.getAttribute("data-poster"),
 				video = new VideoPlayerView({el:this});
 
-				// video.on("play", function(){
-				// 	_t.resetothervideos(this.id);
-				// });
-
 				url += mp4 ? ".mp4" : ".webm";
 				
 				video.load( url, mp4 ? "mp4" : "webm", poster );

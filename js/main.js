@@ -9,7 +9,6 @@ require.config({
         backbone:       'js/vendor/backbone.min',
         underscore:     'js/vendor/underscore.min',
         text:           'js/vendor/text.min',
-        googlemaps:     'js/vendor/googlemaps.min',
         router:         'js/router',
         collections:    'js/collections',
         pages:          'js/views/pages',
@@ -70,13 +69,6 @@ require([
         if(debug) document.documentElement.className += " debug";
 
         if(!mobile) disablepointeronscroll();
-
-        $('a[href*=#]').on('click', function(event){     
-            event.preventDefault();
-            $('body').animate( {scrollTop: ($(this.hash).offset().top-50) + "px"} , 500);
-
-            console.log("anchor clicked",$(this.hash).offset().top);
-        });
 
         /*----- init router ------*/
         router = new Router();

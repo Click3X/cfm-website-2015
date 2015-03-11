@@ -47,7 +47,7 @@ a:hover{
 
 .video-anchor-link{
 	position: absolute;
-	bottom:80px;
+	bottom:60px;
 	left:0; width:100%;
 	text-align:center;
 	z-index:5;
@@ -57,18 +57,31 @@ a:hover{
 		display: block;
 
 		span.arrow{
-			border-top: 10px solid #DDD;
-			border-right: 8px solid transparent;
-			border-left: 8px solid transparent;
-			margin:0 0 0 -5px;
 			display: inline-block;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 8px solid #CCC;
+			vertical-align: middle;
 		}
 
 		span.label{
-			line-height: 14px;
+			font-size: 15px;
+			line-height: 8px;
+			font-family: "gotham-book";
+			vertical-align: middle;
 			display: block;
-			color:#FFF;
-			font-family: "gotham-light";
+			color:#EEE;
+			margin:0 0 0 10px;
+		}
+
+		&:hover{
+			span.arrow{
+				border-left: 8px solid #FFF;
+			}
+
+			span.label{
+				color:#FFF;
+			}
 		}
 	}
 }
@@ -292,10 +305,10 @@ div.section-header{
 
 	h2{
 		text-transform: uppercase;
-		font-family: "gotham-light";
+		font-family: "gotham-bold";
 		font-size: 19px;
 		line-height: 24px;
-		color: #555;
+		color: #CCC;
 		padding:40px 0 40px 0;
 		text-align: center;
 	}
@@ -324,7 +337,7 @@ div.cfm-project-gallery{
  					@include prefix( "transition", background .25s ease-in-out );
 
  					div.project-label{
- 						background-color:#FFF;
+ 						background-color:rgba(255,255,255,.95);
  						opacity: 0;
 
  						@include prefix( "transform", scale(.9) );
@@ -538,7 +551,7 @@ div.social-navigation{
 		position: fixed;
 		top: 0; left: 0;
 		width: 100%; height: 100%;
-		z-index: 4;
+		z-index: 5;
 		top:100%;
 		opacity: 0;
 

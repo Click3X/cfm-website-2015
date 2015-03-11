@@ -1,5 +1,5 @@
 <div id="home-page" class="page-content-inner">
-	<div id="intro-video" class="cfm-videoplayer" nocontrols autoplay loop data-video-name="<?= base_url(); ?>video/cfm_intro" data-poster="<?= base_url(); ?>img/posters/cfm_intro.jpg">
+	<div id="intro-video" class="cfm-videoplayer" nocontrols autoplay loop data-video-name="<?= base_url(); ?>video/cfm_intro" data-poster="<?= base_url(); ?>img/assets/video_posters/CFM_Intro.jpg">
 	    <div class="cfm-videoplayer-inner">
 	    	<div class="video-anchor-link"><a href="#reel-video"><span class="label">Watch Our Reel</span><span class="arrow"></span></a></div>
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
@@ -26,7 +26,7 @@
 	<div class="cfm-project-gallery">
 		<ul>
 			<?php foreach ($featured_projects as $key => $project): ?>
-			<li data-id="<?= $project->id; ?>" data-image="<?php echo base_url().'img/projects/'.$project->thumbnail_image.'.jpg'; ?>">
+			<li data-id="<?= $project->id; ?>" data-image="<?php echo base_url().'img/project_thumbnails/'.$project->thumbnail_image.'.jpg'; ?>">
 				<div class="project-inner">
 					<a class="cfm-project" href="<?= base_url().'featured/'.$project->slug; ?>" data-navigate-to="featured/<?= $project->slug; ?>">
 						<div class="project-label"><div class="project-label-inner"><h2><?= $project->title; ?></h2></div></div>
@@ -36,13 +36,13 @@
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	<div id="reel-video" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="<?= base_url(); ?>img/posters/reel_poster.jpg">
+	<div id="reel-video" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="<?= base_url(); ?>img/assets/video_posters/CFM_Reel.gif">
 	    <div class="cfm-videoplayer-inner">
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
             <div class="cfm-videoplayer-poster">
             	<div class="cfm-videoplayer-poster-header">
             		<div class="cfm-videoplayer-poster-header-inner">
-				  		<div class="cfm-videoplayer-playbutton"><span class="arrow"></span></div>
+				  		<div class="cfm-videoplayer-playbutton"><span class="label">Our 2015 Reel</span><span class="arrow"></span></div>
 					</div>
 				</div>
             </div>

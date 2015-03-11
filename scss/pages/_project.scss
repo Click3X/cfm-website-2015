@@ -9,15 +9,19 @@
 		background-position:center center;
 		width: 100%;
 		padding-bottom:100%;
+		position: relative;
 
 		@media( min-width:$tablet-small){ padding-bottom:60%; }
 		@media( min-width:$tablet-large){ padding-bottom:50%; }
+
+
 	}
 
 	.project-detail{
 		.project-heading{
 			max-width: 1000px;
 			margin:0 auto;
+			position: relative;
 
 			.project-heading-inner{
 				padding:70px 14px 70px 20px;
@@ -29,7 +33,6 @@
 				@media(min-width:1080px){
 					padding:70px 0 70px 0;
 				}
-
 					
 				h2{
 					font-family: "gotham-book";
@@ -38,12 +41,50 @@
 					font-size: 24px;
 					line-height: 30px;
 				}
+
 				h1{
 					font-family: "gotham-light";
 					color: #777;
 					font-size: 36px;
 					line-height: 44px;
 					letter-spacing: -1px;
+				}
+
+				.video-anchor-link{
+					position: static;
+					text-align: left;
+					margin:20px 0 0 6px;
+					width: auto;
+
+					a{
+						display: inline-block;
+
+						span.arrow{
+							display: inline-block;
+							border-top: 6px solid transparent;
+							border-bottom: 6px solid transparent;
+							border-left: 8px solid #CCC;
+							vertical-align: middle;
+							border-right:none;
+						}
+
+						span.label{
+							vertical-align: middle;
+							display: inline-block;
+							color:#CCC;
+							margin:0 0 0 10px;
+						}
+
+						&:hover{
+							span.arrow{
+								border-left: 8px solid #555;
+							}
+
+							span.label{
+								color:#555;
+							}
+						}
+					}
 				}
 			}
 			

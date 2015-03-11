@@ -186,6 +186,8 @@ define([
             if(this.controls) this.controls.toPausedState();
         },
         toPlayingState:function(){
+            this.onresize();
+            
             this.playing = true;
             this.$el.removeClass("paused");
             if( !this.$el.hasClass("playing") )  this.$el.addClass("playing");

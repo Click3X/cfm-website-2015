@@ -66,7 +66,7 @@ class Main extends CI_Controller {
 		if($previousrecord) $previousrecord = $previousrecord->slug;
 
 		if( !empty( $project_data->client_logo ) ){
-			$client_logo = base_url()."img/clients/project/".$project_data->client_logo.".jpg";
+			$client_logo = base_url()."img/client_logos/".$project_data->client_logo.".jpg";
 		} else {
 			$client_logo = "http://placehold.it/410/111111/EEEEEE&text=LOGO";
 		}

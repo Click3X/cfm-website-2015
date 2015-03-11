@@ -59,6 +59,11 @@ define([
 			this.$el.find(".project-asset-image").each(function(){
 				var banner = new BgImageView({el:this});
 			});
+
+			this.$el.find('a[href*=#]').click(function(e){     
+            	e.preventDefault();
+	            $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
+	        });
 		},
 		onclose:function(){
 		},
