@@ -32,7 +32,7 @@
 
 					
 				h2{
-					font-family: "gotham-bold";
+					font-family: "gotham-book";
 					color: $cfmred;
 					margin-bottom: 8px;
 					font-size: 24px;
@@ -209,7 +209,7 @@ html:not(.mobile){
 					background:#FFF;
 					top: 20px; left: 20px;
 	  				margin:0;
-	  				
+
 	  				@media(min-width:$tablet-small){
 	  					top: 40px; left: 40px;
 	  				}
