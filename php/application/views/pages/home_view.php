@@ -36,13 +36,16 @@
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	<div id="reel-video" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="<?= base_url(); ?>img/assets/video_posters/CFM_Reel.gif">
+	<div id="reel-video" class="section-header">
+		<h2>OUR 2015 REEL</h2>
+	</div>
+	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="<?= base_url(); ?>img/assets/video_posters/CFM_Reel.gif">
 	    <div class="cfm-videoplayer-inner">
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
             <div class="cfm-videoplayer-poster">
             	<div class="cfm-videoplayer-poster-header">
             		<div class="cfm-videoplayer-poster-header-inner">
-				  		<div class="cfm-videoplayer-playbutton"><span class="label">Our 2015 Reel</span><span class="arrow"></span></div>
+				  		<div class="cfm-videoplayer-playbutton"><span class="arrow"></span></div>
 					</div>
 				</div>
             </div>

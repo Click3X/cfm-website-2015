@@ -68,21 +68,21 @@
                     <ul>
                         <li id="p1" class="facebook-btn">
                             <div class="project-inner">
-                                <a href="#">
+                                <a target="_blank" href="https://www.facebook.com/Click3X">
                                     <div class="project-label"><div class="project-label-inner"></div></div>
                                 </a>
                             </div>
                         </li>
                         <li id="p2" class="twitter-btn">
                             <div class="project-inner">
-                                <a href="#">
+                                <a target="_blank" href="https://twitter.com/click3x">
                                     <div class="project-label"><div class="project-label-inner"></div></div>
                                 </a>
                             </div>
                         </li>
                         <li id="p3" class="instagram-btn">
                             <div class="project-inner">
-                                <a href="#">
+                                <a target="_blank" href="https://instagram.com/click_3x">
                                     <div class="project-label"><div class="project-label-inner"></div></div>
                                 </a>
                             </div>
