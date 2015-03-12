@@ -3,6 +3,7 @@ define([
     'modules/videoplayer/views/videoplayer-controls_view'
 ], function( Backbone , VideoPlayerControlsView ){
     var VideoPlayerView = Backbone.View.extend({
+        hasplayed:false,
         initialize:function(options){
             var _t = this;
 
@@ -138,6 +139,16 @@ define([
                     _t.toPausedState();
                 });
 
+                $( _t.video ).mousedown(function() {
+                    if( _t.hasplayed ){
+                        if( _t.playing ){
+                            _t.pause();
+                        } else {
+                            _t.play();
+                        }
+                    }
+                });
+
                  $( _t.video ).on( "ended", function() {
                     _t.video.currentTime = 0;
                     if(_t.controls) _t.controls.ontimeupdate(0);
@@ -186,6 +197,8 @@ define([
             if(this.controls) this.controls.toPausedState();
         },
         toPlayingState:function(){
+            this.hasplayed = true;
+
             this.onresize();
             
             this.playing = true;

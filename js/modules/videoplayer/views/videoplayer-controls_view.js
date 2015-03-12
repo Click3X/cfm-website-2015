@@ -2,6 +2,7 @@ define([
   'backbone'
 ], function(Backbone){
 	var VideoPlayerControlsView = Backbone.View.extend({
+        hasplayed:false,
 		initialize:function(options){
 			this.video_el                    = options.video_el;
 
@@ -102,6 +103,7 @@ define([
         },
 		toPlayingState:function(){
 			this.playing = true;
+            this.hasplayed = true;
 
 			console.log("toPlayingState", this.playing);
 
@@ -126,6 +128,7 @@ define([
 		showControls:function(){
 			console.log("show");
 
+            if(this.hasplayed)
 			this.el.style.opacity = ".75";
 		},
 		hideControls:function(){
