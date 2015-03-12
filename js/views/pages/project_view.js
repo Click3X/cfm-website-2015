@@ -33,6 +33,11 @@ define([
 		        }
 		    });
 		},
+		resetothervideos:function(_id){
+			$.each(this.videos,function(i,v){
+				if(v.id != _id) v.reset();
+			});
+		},
 		initdetails:function(){
 			var _t = this;
 
@@ -43,6 +48,11 @@ define([
 				
 				var poster_url 		= this.getAttribute( "data-poster" );
 				var videoplayer 	= new VideoPlayerView( { el:this } );
+
+				videoplayer.on("play",function(){
+					console.log("video playing", this.id);
+					_t.resetothervideos(this.id);
+				});
 
 				videoplayer.load( video_url, mp4 ? "mp4" : "webm", poster_url );
 				

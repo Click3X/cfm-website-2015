@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="page-labels"><ul><li data-page-id="projects">Projects</li><li data-page-id="project">Project</li><li data-page-id="about">About</li></ul></div>
+                    <div id="page-labels"><ul><li data-page-id="projects">PROJECTS</li><li data-page-id="project">PROJECT</li><li data-page-id="about">ABOUT</li></ul></div>
                 </div>
             </div>
 

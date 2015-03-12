@@ -68,7 +68,7 @@ define([
                 	_t.hideControls();
                 }, 1000);
 
-                console.log("mouse move");
+                // console.log("mouse move");
             });
 
             $(_t.video_el).on("mouseout", function() {
@@ -105,7 +105,7 @@ define([
 			this.playing = true;
             this.hasplayed = true;
 
-			console.log("toPlayingState", this.playing);
+			// console.log("toPlayingState", this.playing);
 
 			if( !$(this.playButton).hasClass("active") )
 				$(this.playButton).addClass("active");

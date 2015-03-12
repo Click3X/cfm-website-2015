@@ -175,19 +175,20 @@ define([
                 _t.video.currentTime = 0;
                 if(_t.controls) _t.controls.ontimeupdate(0);
 
-                // _t.video.currentTime = 0;
-                // if(_t.controls) _t.controls.ontimeupdate(0);
+                _t.video.currentTime = 0;
+                if(_t.controls) _t.controls.ontimeupdate(0);
 
-                // setTimeout(function(){
-                //     _t.autoplay         = false;
-                //     _t.loop             = false;
-                //     _t.nocontrols       = false;
+                setTimeout(function(){
+                    _t.autoplay         = false;
+                    _t.loop             = false;
+                    _t.nocontrols       = false;
+                    _t.hasplayed        = false;
 
-                //     _t.$el.removeClass("loop");
-                //     _t.$el.removeClass("autoplay");
-                //     _t.$el.removeClass("nocontrols");
-                //     _t.$el.removeClass("paused");
-                // },500);
+                    _t.$el.removeClass("loop");
+                    _t.$el.removeClass("autoplay");
+                    _t.$el.removeClass("nocontrols");
+                    _t.$el.removeClass("paused");
+                },500);
             }
         },
         toPausedState:function(){
