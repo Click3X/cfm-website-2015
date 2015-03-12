@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: localhost (MySQL 5.6.22)
+# Host: 69.25.178.3 (MySQL 5.0.95)
 # Database: cfm
-# Generation Time: 2015-03-12 19:09:03 +0000
+# Generation Time: 2015-03-12 19:37:20 +0000
 # ************************************************************
 
 
@@ -26,9 +26,9 @@
 DROP TABLE IF EXISTS `asset_types`;
 
 CREATE TABLE `asset_types` (
-  `id` int(2) unsigned NOT NULL AUTO_INCREMENT,
-  `asset_type_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(2) unsigned NOT NULL auto_increment,
+  `asset_type_name` varchar(20) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `asset_types` WRITE;
@@ -52,14 +52,14 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `assets`;
 
 CREATE TABLE `assets` (
-  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-  `asset_type_id` int(2) DEFAULT NULL,
-  `title` varchar(100) DEFAULT NULL,
-  `heading` varchar(100) DEFAULT NULL,
-  `subhead` varchar(200) DEFAULT NULL,
-  `blurb` varchar(400) DEFAULT NULL,
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `asset_type_id` int(2) default NULL,
+  `title` varchar(100) default NULL,
+  `heading` varchar(100) default NULL,
+  `subhead` varchar(200) default NULL,
+  `blurb` varchar(400) default NULL,
   `description` text,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `assets` WRITE;
@@ -114,7 +114,8 @@ VALUES
 	(45,1,NULL,NULL,NULL,NULL,NULL),
 	(46,1,NULL,NULL,NULL,NULL,NULL),
 	(47,1,NULL,NULL,NULL,NULL,NULL),
-	(48,2,NULL,NULL,NULL,NULL,NULL);
+	(48,2,NULL,NULL,NULL,NULL,NULL),
+	(49,2,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `assets` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -126,63 +127,66 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `assets_media_lu`;
 
 CREATE TABLE `assets_media_lu` (
-  `asset_id` int(4) DEFAULT NULL,
-  `media_id` int(4) DEFAULT NULL
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `asset_id` int(4) default NULL,
+  `media_id` int(4) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `assets_media_lu` WRITE;
 /*!40000 ALTER TABLE `assets_media_lu` DISABLE KEYS */;
 
-INSERT INTO `assets_media_lu` (`asset_id`, `media_id`)
+INSERT INTO `assets_media_lu` (`id`, `asset_id`, `media_id`)
 VALUES
-	(1,1),
-	(2,2),
-	(3,3),
-	(4,4),
-	(5,5),
-	(6,6),
-	(7,7),
-	(8,8),
-	(9,9),
-	(10,10),
-	(11,11),
-	(12,12),
-	(13,13),
-	(14,14),
-	(15,15),
-	(16,16),
-	(17,17),
-	(18,18),
-	(19,19),
-	(20,20),
-	(21,21),
-	(22,22),
-	(23,23),
-	(24,24),
-	(25,25),
-	(26,26),
-	(27,27),
-	(28,28),
-	(29,29),
-	(30,30),
-	(31,31),
-	(32,32),
-	(33,33),
-	(34,34),
-	(35,35),
-	(36,36),
-	(37,37),
-	(38,38),
-	(39,39),
-	(40,40),
-	(41,41),
-	(42,42),
-	(43,43),
-	(44,44),
-	(45,45),
-	(46,46),
-	(47,47),
-	(48,48);
+	(1,1,1),
+	(2,2,2),
+	(3,3,3),
+	(4,4,4),
+	(5,5,5),
+	(6,6,6),
+	(7,7,7),
+	(8,8,8),
+	(9,9,9),
+	(10,10,10),
+	(11,11,11),
+	(12,12,12),
+	(13,13,13),
+	(14,14,14),
+	(15,15,15),
+	(16,16,16),
+	(17,17,17),
+	(18,18,18),
+	(19,19,19),
+	(20,20,20),
+	(21,21,21),
+	(22,22,22),
+	(23,23,23),
+	(24,24,24),
+	(25,25,25),
+	(26,26,26),
+	(27,27,27),
+	(28,28,28),
+	(29,29,29),
+	(30,30,30),
+	(31,31,31),
+	(32,32,32),
+	(33,33,33),
+	(34,34,34),
+	(35,35,35),
+	(36,36,36),
+	(37,37,37),
+	(38,38,38),
+	(39,39,39),
+	(40,40,40),
+	(41,41,41),
+	(42,42,42),
+	(43,43,43),
+	(44,44,44),
+	(45,45,45),
+	(46,46,46),
+	(47,47,47),
+	(48,48,48),
+	(49,49,49);
 
 /*!40000 ALTER TABLE `assets_media_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -194,9 +198,9 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `categories`;
 
 CREATE TABLE `categories` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `category_name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `category_name` varchar(50) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `categories` WRITE;
@@ -217,10 +221,10 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `links`;
 
 CREATE TABLE `links` (
-  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-  `label` varchar(50) DEFAULT NULL,
-  `href` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `label` varchar(50) default NULL,
+  `href` varchar(100) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `links` WRITE;
@@ -233,7 +237,8 @@ VALUES
 	(4,'Visit Site','http://bcacampaign.com/'),
 	(5,'See Experience','http://staging.click3x.com/kmart/kmart_shoppable-video/'),
 	(6,'Visit Site','http://www.peanutbutter.com/yippee/funbutton/index.php'),
-	(8,'Visit Site','http://www.gamut.media/');
+	(8,'Visit Site','http://www.gamut.media/'),
+	(9,'VFILES','http://vfiles.com');
 
 /*!40000 ALTER TABLE `links` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -245,12 +250,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `media`;
 
 CREATE TABLE `media` (
-  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(200) DEFAULT NULL,
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `title` varchar(200) default NULL,
   `description` text,
-  `filename` varchar(100) DEFAULT NULL,
-  `media_type_id` int(2) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `filename` varchar(100) default NULL,
+  `media_type_id` int(2) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `media` WRITE;
@@ -305,7 +310,8 @@ VALUES
 	(45,NULL,NULL,'Verizon_header',1),
 	(46,NULL,NULL,'Zyrtec',1),
 	(47,NULL,NULL,'att2_header',1),
-	(48,NULL,NULL,'Wendys_ANTHEM_BBQ_YT',2);
+	(48,NULL,NULL,'Wendys_ANTHEM_BBQ_YT',2),
+	(49,NULL,NULL,'Welcome_to_VFILES_1',2);
 
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -317,9 +323,9 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `media_types`;
 
 CREATE TABLE `media_types` (
-  `id` int(2) unsigned NOT NULL AUTO_INCREMENT,
-  `media_type_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(2) unsigned NOT NULL auto_increment,
+  `media_type_name` varchar(20) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `media_types` WRITE;
@@ -341,17 +347,17 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `projects`;
 
 CREATE TABLE `projects` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `order` int(11) DEFAULT NULL,
-  `slug` varchar(50) DEFAULT NULL,
-  `title` varchar(100) DEFAULT NULL,
-  `heading` varchar(200) DEFAULT NULL,
-  `subhead` varchar(200) DEFAULT NULL,
-  `blurb` varchar(500) DEFAULT NULL,
-  `description` varchar(4000) DEFAULT NULL,
-  `thumbnail_image` varchar(50) DEFAULT NULL,
-  `client_logo` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL auto_increment,
+  `order` int(11) default NULL,
+  `slug` varchar(50) default NULL,
+  `title` varchar(100) default NULL,
+  `heading` varchar(200) default NULL,
+  `subhead` varchar(200) default NULL,
+  `blurb` varchar(500) default NULL,
+  `description` varchar(4000) default NULL,
+  `thumbnail_image` varchar(50) default NULL,
+  `client_logo` varchar(50) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects` WRITE;
@@ -408,63 +414,66 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `projects_asset_lu`;
 
 CREATE TABLE `projects_asset_lu` (
-  `project_id` int(4) DEFAULT NULL,
-  `asset_id` int(4) DEFAULT NULL
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `project_id` int(4) default NULL,
+  `asset_id` int(4) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects_asset_lu` WRITE;
 /*!40000 ALTER TABLE `projects_asset_lu` DISABLE KEYS */;
 
-INSERT INTO `projects_asset_lu` (`project_id`, `asset_id`)
+INSERT INTO `projects_asset_lu` (`id`, `project_id`, `asset_id`)
 VALUES
-	(1,1),
-	(2,2),
-	(3,3),
-	(4,4),
-	(5,5),
-	(6,6),
-	(7,7),
-	(8,8),
-	(8,9),
-	(4,10),
-	(5,11),
-	(3,12),
-	(1,13),
-	(2,14),
-	(9,15),
-	(9,16),
-	(10,17),
-	(10,18),
-	(11,19),
-	(11,20),
-	(12,21),
-	(13,22),
-	(14,23),
-	(15,24),
-	(16,25),
-	(17,26),
-	(18,27),
-	(19,28),
-	(20,29),
-	(21,30),
-	(22,31),
-	(23,32),
-	(24,33),
-	(25,34),
-	(26,35),
-	(27,36),
-	(28,37),
-	(29,38),
-	(30,39),
-	(31,40),
-	(32,41),
-	(33,42),
-	(34,43),
-	(35,44),
-	(36,45),
-	(37,46),
-	(38,47),
-	(1,48);
+	(1,1,1),
+	(2,2,2),
+	(3,3,3),
+	(4,4,4),
+	(5,5,5),
+	(6,6,6),
+	(7,7,7),
+	(8,8,8),
+	(9,8,9),
+	(10,4,10),
+	(11,5,11),
+	(12,3,12),
+	(13,1,13),
+	(14,2,14),
+	(15,9,15),
+	(16,9,16),
+	(17,10,17),
+	(18,10,18),
+	(19,11,19),
+	(20,11,20),
+	(21,12,21),
+	(22,13,22),
+	(23,14,23),
+	(24,15,24),
+	(25,16,25),
+	(26,17,26),
+	(27,18,27),
+	(28,19,28),
+	(29,20,29),
+	(30,21,30),
+	(31,22,31),
+	(32,23,32),
+	(33,24,33),
+	(34,25,34),
+	(35,26,35),
+	(36,27,36),
+	(37,28,37),
+	(38,29,38),
+	(39,30,39),
+	(40,31,40),
+	(41,32,41),
+	(42,33,42),
+	(43,34,43),
+	(44,35,44),
+	(45,36,45),
+	(46,37,46),
+	(47,38,47),
+	(48,1,48),
+	(49,4,49);
 
 /*!40000 ALTER TABLE `projects_asset_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -476,59 +485,61 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `projects_category_lu`;
 
 CREATE TABLE `projects_category_lu` (
-  `project_id` int(4) DEFAULT NULL,
-  `category_id` int(4) DEFAULT NULL
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `project_id` int(4) default NULL,
+  `category_id` int(4) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects_category_lu` WRITE;
 /*!40000 ALTER TABLE `projects_category_lu` DISABLE KEYS */;
 
-INSERT INTO `projects_category_lu` (`project_id`, `category_id`)
+INSERT INTO `projects_category_lu` (`id`, `project_id`, `category_id`)
 VALUES
-	(1,2),
-	(2,2),
-	(3,2),
-	(4,2),
-	(5,2),
-	(6,2),
-	(1,1),
-	(2,1),
-	(3,1),
-	(4,1),
-	(5,1),
-	(6,1),
-	(7,1),
-	(8,1),
-	(9,1),
-	(10,1),
-	(11,1),
-	(12,1),
-	(13,1),
-	(14,1),
-	(15,1),
-	(16,1),
-	(17,1),
-	(18,1),
-	(19,1),
-	(20,1),
-	(21,1),
-	(22,1),
-	(23,1),
-	(24,1),
-	(25,1),
-	(26,1),
-	(27,1),
-	(28,1),
-	(29,1),
-	(30,1),
-	(31,1),
-	(32,1),
-	(33,1),
-	(34,1),
-	(35,1),
-	(36,1),
-	(37,1),
-	(38,1);
+	(1,1,2),
+	(2,2,2),
+	(3,3,2),
+	(4,4,2),
+	(5,5,2),
+	(6,6,2),
+	(7,1,1),
+	(8,2,1),
+	(9,3,1),
+	(10,4,1),
+	(11,5,1),
+	(12,6,1),
+	(13,7,1),
+	(14,8,1),
+	(15,9,1),
+	(16,10,1),
+	(17,11,1),
+	(18,12,1),
+	(19,13,1),
+	(20,14,1),
+	(21,15,1),
+	(22,16,1),
+	(23,17,1),
+	(24,18,1),
+	(25,19,1),
+	(26,20,1),
+	(27,21,1),
+	(28,22,1),
+	(29,23,1),
+	(30,24,1),
+	(31,25,1),
+	(32,26,1),
+	(33,27,1),
+	(34,28,1),
+	(35,29,1),
+	(36,30,1),
+	(37,31,1),
+	(38,32,1),
+	(39,33,1),
+	(40,34,1),
+	(41,35,1),
+	(42,36,1),
+	(43,37,1),
+	(44,38,1);
 
 /*!40000 ALTER TABLE `projects_category_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -540,21 +551,24 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `projects_link_lu`;
 
 CREATE TABLE `projects_link_lu` (
-  `project_id` int(4) DEFAULT NULL,
-  `link_id` int(4) DEFAULT NULL
+  `id` int(4) unsigned NOT NULL auto_increment,
+  `project_id` int(4) default NULL,
+  `link_id` int(4) default NULL,
+  PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects_link_lu` WRITE;
 /*!40000 ALTER TABLE `projects_link_lu` DISABLE KEYS */;
 
-INSERT INTO `projects_link_lu` (`project_id`, `link_id`)
+INSERT INTO `projects_link_lu` (`id`, `project_id`, `link_id`)
 VALUES
-	(4,1),
-	(4,2),
-	(5,4),
-	(7,5),
-	(3,6),
-	(2,8);
+	(1,4,1),
+	(2,4,2),
+	(3,5,4),
+	(4,7,5),
+	(5,3,6),
+	(6,2,8),
+	(7,4,9);
 
 /*!40000 ALTER TABLE `projects_link_lu` ENABLE KEYS */;
 UNLOCK TABLES;

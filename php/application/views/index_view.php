@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="page-labels"><ul><li data-page-id="projects">PROJECTS</li><li data-page-id="project">PROJECT</li><li data-page-id="about">ABOUT</li></ul></div>
+                    <div id="page-labels"><ul><li data-page-id="projects">WORK</li><li data-page-id="project">PROJECT</li><li data-page-id="about">ABOUT</li></ul></div>
                 </div>
             </div>
 
@@ -89,12 +89,12 @@
                         </li>
                     </ul>
                 </div>
-                <p>16 W 22nd Street, New York, NY 10010<br /><a href="mailto:info@reason2be.com">info@clickfiremedia.com</a></p>
+                <p>212.627.1900<br />16 W 22nd Street 4th Floor, New York, NY 10010<br /><a href="mailto:info@reason2be.com">info@clickfiremedia.com</a></p>
                 <div id="mobile-menu" class="cfm-navigation mobile-menu">
                     <div class="mobile-menu-inner">
                         <ul>
                             <li><a data-navigate-to="home" href="<?= base_url(); ?>home"><h1>HOME</h1></a></li>
-                            <li><a data-navigate-to="projects" href="<?= base_url(); ?>projects"><h1>PROJECTS</h1></a></li>
+                            <li><a data-navigate-to="projects" href="<?= base_url(); ?>projects"><h1>WORK</h1></a></li>
                             <li><a data-navigate-to="about" href="<?= base_url(); ?>home"><h1>ABOUT</h1></a></li>
                             <li><a href="http://www.click3x.com/people/clickfire_media" ><h1>PEOPLE</h1></a></li>
                             <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
