@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.22)
 # Database: cfm
-# Generation Time: 2015-03-12 05:16:37 +0000
+# Generation Time: 2015-03-12 19:09:03 +0000
 # ************************************************************
 
 
@@ -113,7 +113,8 @@ VALUES
 	(44,1,NULL,NULL,NULL,NULL,NULL),
 	(45,1,NULL,NULL,NULL,NULL,NULL),
 	(46,1,NULL,NULL,NULL,NULL,NULL),
-	(47,1,NULL,NULL,NULL,NULL,NULL);
+	(47,1,NULL,NULL,NULL,NULL,NULL),
+	(48,2,NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `assets` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -180,7 +181,8 @@ VALUES
 	(44,44),
 	(45,45),
 	(46,46),
-	(47,47);
+	(47,47),
+	(48,48);
 
 /*!40000 ALTER TABLE `assets_media_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -229,9 +231,9 @@ VALUES
 	(1,'iTunes','https://itunes.apple.com/us/app/v'),
 	(2,'Google Play','https://play.google.com/store/apps/details?id=com.vfiles.smashion&hl=en'),
 	(4,'Visit Site','http://bcacampaign.com/'),
-	(5,'Visit Site','http://staging.click3x.com/kmart/kmart_shoppable-video/'),
+	(5,'See Experience','http://staging.click3x.com/kmart/kmart_shoppable-video/'),
 	(6,'Visit Site','http://www.peanutbutter.com/yippee/funbutton/index.php'),
-	(7,'Visit Site','http://www.aurasma.com/campaigns/#/makeupforever');
+	(8,'Visit Site','http://www.gamut.media/');
 
 /*!40000 ALTER TABLE `links` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -302,7 +304,8 @@ VALUES
 	(44,NULL,NULL,'uniqlo_header',1),
 	(45,NULL,NULL,'Verizon_header',1),
 	(46,NULL,NULL,'Zyrtec',1),
-	(47,NULL,NULL,'att2_header',1);
+	(47,NULL,NULL,'att2_header',1),
+	(48,NULL,NULL,'Wendys_ANTHEM_BBQ_YT',2);
 
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -460,7 +463,8 @@ VALUES
 	(35,44),
 	(36,45),
 	(37,46),
-	(38,47);
+	(38,47),
+	(1,48);
 
 /*!40000 ALTER TABLE `projects_asset_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -536,21 +540,21 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `projects_link_lu`;
 
 CREATE TABLE `projects_link_lu` (
-  `link_id` int(4) DEFAULT NULL,
-  `project_id` int(4) DEFAULT NULL
+  `project_id` int(4) DEFAULT NULL,
+  `link_id` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `projects_link_lu` WRITE;
 /*!40000 ALTER TABLE `projects_link_lu` DISABLE KEYS */;
 
-INSERT INTO `projects_link_lu` (`link_id`, `project_id`)
+INSERT INTO `projects_link_lu` (`project_id`, `link_id`)
 VALUES
-	(1,4),
-	(2,4),
-	(4,5),
-	(5,7),
-	(6,3),
-	(7,9);
+	(4,1),
+	(4,2),
+	(5,4),
+	(7,5),
+	(3,6),
+	(2,8);
 
 /*!40000 ALTER TABLE `projects_link_lu` ENABLE KEYS */;
 UNLOCK TABLES;
