@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.22)
 # Database: cfm
-# Generation Time: 2015-03-13 05:27:41 +0000
+# Generation Time: 2015-03-13 09:42:25 +0000
 # ************************************************************
 
 
@@ -108,11 +108,10 @@ VALUES
 	(43,1,NULL,NULL,NULL,NULL,NULL),
 	(44,1,NULL,NULL,NULL,NULL,NULL),
 	(45,1,NULL,NULL,NULL,NULL,NULL),
-	(46,1,NULL,NULL,NULL,NULL,NULL),
 	(47,1,NULL,NULL,NULL,NULL,NULL),
 	(50,2,NULL,NULL,'Facebook Application',NULL,NULL),
 	(51,5,'Yippee Giffs',NULL,'Yippee! GIFS',NULL,NULL),
-	(52,5,'Wendy\'s Gifs',NULL,'',NULL,NULL),
+	(52,5,'Wendy\'s Gifs',NULL,'The GIFs',NULL,NULL),
 	(54,2,'',NULL,NULL,NULL,NULL),
 	(55,5,'Lowe\'s Vines','','The Vines',NULL,''),
 	(56,2,'Watch The Spot',NULL,'BBQ Accessibility',NULL,NULL),
@@ -182,7 +181,6 @@ VALUES
 	(43,43,43),
 	(44,44,44),
 	(45,45,45),
-	(46,46,46),
 	(47,47,47),
 	(48,56,48),
 	(49,58,49),
@@ -306,29 +304,27 @@ VALUES
 	(19,NULL,NULL,'roxy_header',1,NULL),
 	(20,NULL,NULL,'CFM_Roxy_CS',2,NULL),
 	(21,NULL,NULL,'7forAllmankind_header',2,NULL),
-	(22,NULL,NULL,'Amtrak_header',1,NULL),
-	(23,NULL,NULL,'Armorall_header',1,NULL),
-	(24,NULL,NULL,'ATT_Flick_header',1,NULL),
-	(25,NULL,NULL,'BCA_2013_header',1,NULL),
-	(26,NULL,NULL,'Chaps_header',1,NULL),
-	(27,NULL,NULL,'ChevySonic_header',1,NULL),
-	(28,NULL,NULL,'Daffys_header',1,NULL),
-	(29,NULL,NULL,'davidb_header',1,NULL),
-	(30,NULL,NULL,'Dennys_header',1,NULL),
-	(31,NULL,NULL,'Durex_header',1,NULL),
-	(32,NULL,NULL,'EUC_header',1,NULL),
-	(33,NULL,NULL,'Google_header',1,NULL),
-	(34,NULL,NULL,'Geico_piggy_header',1,NULL),
-	(35,NULL,NULL,'Geico_ventriloquist_header',1,NULL),
-	(36,NULL,NULL,'HeardCity_header',1,NULL),
-	(37,NULL,NULL,'HM_header',1,NULL),
-	(38,NULL,NULL,'ManVSFood_header',1,NULL),
-	(39,NULL,NULL,'munchkin_header',1,NULL),
-	(40,NULL,NULL,'NineWest_header',1,NULL),
-	(41,NULL,NULL,'Parliament_header',1,NULL),
-	(42,NULL,NULL,'Pedigree_header',1,NULL),
-	(43,NULL,NULL,'SailorJerry_header',1,NULL),
-	(44,NULL,NULL,'uniqlo_header',1,NULL),
+	(22,NULL,NULL,'Amtrak_header',2,NULL),
+	(23,NULL,NULL,'Armorall_header',2,NULL),
+	(26,NULL,NULL,'Chaps_header',2,NULL),
+	(27,NULL,NULL,'ChevySonic_header',2,NULL),
+	(28,NULL,NULL,'Daffys_header',2,NULL),
+	(29,NULL,NULL,'davidb_header',2,NULL),
+	(30,NULL,NULL,'Dennys_header',2,NULL),
+	(31,NULL,NULL,'Durex_header',2,NULL),
+	(32,NULL,NULL,'EUC_header',2,NULL),
+	(33,NULL,NULL,'Google_header',2,NULL),
+	(34,NULL,NULL,'Geico_piggy_header',2,NULL),
+	(35,NULL,NULL,'Geico_ventriloquist_header',2,NULL),
+	(36,NULL,NULL,'HeardCity_header',2,NULL),
+	(37,NULL,NULL,'HM_header',2,NULL),
+	(38,NULL,NULL,'ManVSFood_header',2,NULL),
+	(39,NULL,NULL,'munchkin_header',2,NULL),
+	(40,NULL,NULL,'NineWest_header',2,NULL),
+	(41,NULL,NULL,'Parliament_header',2,NULL),
+	(42,NULL,NULL,'Pedigree_header',2,NULL),
+	(43,NULL,NULL,'SailorJerry_header',2,NULL),
+	(44,NULL,NULL,'uniqlo_header',2,NULL),
 	(45,NULL,NULL,'Verizon_header',1,NULL),
 	(46,NULL,NULL,'Zyrtec',1,NULL),
 	(47,NULL,NULL,'att2_header',1,NULL),
@@ -441,7 +437,6 @@ VALUES
 	(34,34,'sailor-jerry','Sailor Jerry','','Sailor Jerry Mobile App',NULL,'ClickFireMedia was challenged by Quaker City Mercantile to create an app for their client, Sailor Jerry. The iOS app allows users to to preview various Sailor Jerry themed tattoos by using their iphone or ipad camera.</p><p>\nUsers can slide through a large tattoo gallery. Once they find the art they like, they can tap it and drag it into position. By pinching and pulling the image, they can adjust the tattoo until it fits just right.The user can then snap a photo, save it and even post the photo of their newly tattooed self to Facebook and Twitter.If they want to make the tattoo permanent, users can also search for the closest Sailor Jerry Tattoo Artist using the Google Maps API without leaving the app.','sailor_jerry','sailor_jerry'),
 	(35,35,'uniqlo','Uniqlo','','Uniqlo Gifbox',NULL,'For the holiday season, Uniqlo wanted to create a giveaway engagement to live on their homepage that revolved around the animated GIF resurgence. Uniqlo gave away the opportunity to win 100% off (up to $500), and everyone wins a coupon and GIF to share on Facebook, Twitter, and Email. Click was charged by Digitas and Uniqlo with developing the experience as well as creating close to 50 share-worthy animated GIFs. The HTML5 engagement runs seamlessly on desktops and mobile devices alike.','uniqlo','uniqlo'),
 	(36,36,'verizon','Verizon','Verizon','Verizon Banners',NULL,NULL,'verizon','verizon'),
-	(37,37,'zyrtec','Zyrtec','Zyrtec','Zyrtec Banners',NULL,NULL,'zyrtec','zyrtec'),
 	(38,38,'att-elements','AT&T','AT&T Elements','AT&T Elements of Everyday Life',NULL,'BBDO challenged our team to create the Elements of Everyday Life, a Vine-based video content site for the Samsung Galaxy Active. </p><p>Using an in-house Writer/Director team, we shot more than 30 Vines. We also developed a responsive design website based on the content, fully integrating with Vine and the Twitter Card API for enhanced social-share visibility.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>AT&T<br />\n<span class=\"description-label\">Credits:</span>BBDO, Click 3X and Clickfire Media<br />\n<span class=\"description-label\">Platforms:</span>Desktop, Tablet, Mobile, Social Media - Vine and Twitter','att_elements','att');
 
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
@@ -505,7 +500,6 @@ VALUES
 	(43,34,43),
 	(44,35,44),
 	(45,36,45),
-	(46,37,46),
 	(47,38,47),
 	(48,1,56),
 	(50,10,50),
@@ -574,7 +568,6 @@ VALUES
 	(40,34,1),
 	(41,35,1),
 	(42,36,1),
-	(43,37,1),
 	(44,38,1);
 
 /*!40000 ALTER TABLE `projects_category_lu` ENABLE KEYS */;
