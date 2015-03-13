@@ -15,6 +15,8 @@ define([
 			} else {
 				this.loadprojectdetails();
 			}
+
+			ga('send', 'pageview', "/project/" + this.id);
 		},
 		loadprojectdetails:function(){
 			var _t = this;
