@@ -91,18 +91,15 @@
 			display: block;
 
 			.project-asset-description{
-				max-width: 1000px;
-				margin:0 auto;
-
 				.project-asset-description-inner{
-					padding:20px 10px 20px 10px;
+					padding:10px 20px 10px 20px;
 
 					@media(min-width:$tablet-small){
-						padding:20px 40px 20px 40px;
+						padding:10px 40px 10px 40px;
 					}
 
 					@media(min-width:1080px){
-						padding:20px 0 20px 0;
+						padding:10px 40px 10px 40px;
 					}
 
 					h3{
@@ -114,8 +111,9 @@
 					}
 
 					h2{
-						font-size: 32px;
-						line-height: 32px;
+						margin-left: 1px;
+						font-size: 24px;
+						line-height: 26px;
 						font-family: "gotham-light";
 						color: #555;
 					}

@@ -1,7 +1,7 @@
 <div id="<?php echo $data->slug; ?>-video" class="project-asset-description">
     <div class="project-asset-description-inner">
-        <h2><?php echo $asset->heading; ?></h2>
-        <h3><?php echo $asset->subhead; ?></h3>
+        <h3><?php echo $asset->heading; ?></h3>
+        <h2><?php echo $asset->subhead; ?></h2>
         <p><?php echo $asset->description; ?></p>
     </div>
 </div>

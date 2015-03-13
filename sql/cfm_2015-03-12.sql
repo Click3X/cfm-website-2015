@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.22)
 # Database: cfm
-# Generation Time: 2015-03-12 20:30:22 +0000
+# Generation Time: 2015-03-13 02:25:39 +0000
 # ************************************************************
 
 
@@ -116,7 +116,11 @@ VALUES
 	(47,1,NULL,NULL,NULL,NULL,NULL),
 	(48,2,NULL,NULL,NULL,NULL,NULL),
 	(49,2,'About VFILES',NULL,NULL,NULL,NULL),
-	(50,2,NULL,NULL,NULL,NULL,NULL);
+	(50,2,NULL,NULL,NULL,NULL,NULL),
+	(51,3,'Yippie Giffs',NULL,NULL,NULL,NULL),
+	(52,1,'Wendy\'s Giffs',NULL,NULL,NULL,NULL),
+	(53,5,'Lowe\'s Vines','The 12 Spots','looped more than 13.5 million times',NULL,'The 12 spots that resulted became the most popular Lowe’s Vine campaign to date and have now been looped more than 13.5 million times.'),
+	(54,2,'',NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `assets` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -188,7 +192,32 @@ VALUES
 	(47,47,47),
 	(48,48,48),
 	(49,49,49),
-	(50,50,50);
+	(50,50,50),
+	(51,51,62),
+	(52,51,63),
+	(53,51,64),
+	(54,51,65),
+	(55,52,66),
+	(56,52,67),
+	(57,52,68),
+	(58,52,69),
+	(59,52,70),
+	(60,52,71),
+	(61,52,72),
+	(62,52,73),
+	(63,53,51),
+	(64,53,52),
+	(65,53,53),
+	(66,53,54),
+	(67,53,55),
+	(68,53,56),
+	(69,53,57),
+	(70,53,58),
+	(71,53,59),
+	(72,53,60),
+	(73,53,61),
+	(74,54,74),
+	(75,53,75);
 
 /*!40000 ALTER TABLE `assets_media_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -257,64 +286,90 @@ CREATE TABLE `media` (
   `description` text,
   `filename` varchar(100) DEFAULT NULL,
   `media_type_id` int(2) DEFAULT NULL,
+  `href` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `media` WRITE;
 /*!40000 ALTER TABLE `media` DISABLE KEYS */;
 
-INSERT INTO `media` (`id`, `title`, `description`, `filename`, `media_type_id`)
+INSERT INTO `media` (`id`, `title`, `description`, `filename`, `media_type_id`, `href`)
 VALUES
-	(1,NULL,NULL,'wendys_header',1),
-	(2,NULL,NULL,'gamut_header',1),
-	(3,NULL,NULL,'skippy_yippie_header',1),
-	(4,NULL,NULL,'smashion_header',1),
-	(5,NULL,NULL,'bca_header',1),
-	(6,NULL,NULL,'lowes_vines_header',1),
-	(7,NULL,NULL,'kmart_video_header',1),
-	(8,'',NULL,'gazprom_header',1),
-	(9,NULL,NULL,'Gazprom_Casestudy',2),
-	(10,NULL,NULL,'VFILES_CS_FINAL',2),
-	(11,NULL,NULL,'BCA2014_Trailer_Final',2),
-	(12,NULL,NULL,'Skippy_Case_Study',2),
-	(13,NULL,NULL,'Wendys_CS',2),
-	(14,NULL,NULL,'gamut',2),
-	(15,NULL,NULL,'mufe_header',1),
-	(16,NULL,NULL,'MakeUpForever',2),
-	(17,NULL,NULL,'sharp_header',1),
-	(18,NULL,NULL,'sharp_experience',2),
-	(19,NULL,NULL,'roxy_header',1),
-	(20,NULL,NULL,'Roxy_01',2),
-	(21,NULL,NULL,'7forAllmankind_header',1),
-	(22,NULL,NULL,'Amtrak_header',1),
-	(23,NULL,NULL,'Armorall_header',1),
-	(24,NULL,NULL,'ATT_Flick_header',1),
-	(25,NULL,NULL,'BCA_2013_header',1),
-	(26,NULL,NULL,'Chaps_header',1),
-	(27,NULL,NULL,'ChevySonic_header',1),
-	(28,NULL,NULL,'Daffys_header',1),
-	(29,NULL,NULL,'davidb_header',1),
-	(30,NULL,NULL,'Dennys_header',1),
-	(31,NULL,NULL,'Durex_header',1),
-	(32,NULL,NULL,'EUC_header',1),
-	(33,NULL,NULL,'Google_header',1),
-	(34,NULL,NULL,'Geico_piggy_header',1),
-	(35,NULL,NULL,'Geico_ventriloquist_header',1),
-	(36,NULL,NULL,'HeardCity_header',1),
-	(37,NULL,NULL,'HM_header',1),
-	(38,NULL,NULL,'ManVSFood_header',1),
-	(39,NULL,NULL,'munchkin_header',1),
-	(40,NULL,NULL,'NineWest_header',1),
-	(41,NULL,NULL,'Parliament_header',1),
-	(42,NULL,NULL,'Pedigree_header',1),
-	(43,NULL,NULL,'SailorJerry_header',1),
-	(44,NULL,NULL,'uniqlo_header',1),
-	(45,NULL,NULL,'Verizon_header',1),
-	(46,NULL,NULL,'Zyrtec',1),
-	(47,NULL,NULL,'att2_header',1),
-	(48,NULL,NULL,'Wendys_ANTHEM_BBQ_YT',2),
-	(49,NULL,NULL,'Welcome_to_VFILES_1',2),
-	(50,NULL,NULL,'SharpAppv4_final',2);
+	(1,NULL,NULL,'wendys_header',1,NULL),
+	(2,NULL,NULL,'gamut_header',1,NULL),
+	(3,NULL,NULL,'skippy_yippie_header',1,NULL),
+	(4,NULL,NULL,'smashion_header',1,NULL),
+	(5,NULL,NULL,'bca_header',1,NULL),
+	(6,NULL,NULL,'lowes_vines_header',1,NULL),
+	(7,NULL,NULL,'kmart_video_header',1,NULL),
+	(8,NULL,NULL,'gazprom_header',1,NULL),
+	(9,NULL,NULL,'Gazprom_Casestudy',2,NULL),
+	(10,NULL,NULL,'VFILES_CS_FINAL',2,NULL),
+	(11,NULL,NULL,'BCA2014_Trailer_Final',2,NULL),
+	(12,NULL,NULL,'Skippy_Case_Study',2,NULL),
+	(13,NULL,NULL,'Wendys_CS',2,NULL),
+	(14,NULL,NULL,'gamut',2,NULL),
+	(15,NULL,NULL,'mufe_header',1,NULL),
+	(16,NULL,NULL,'MakeUpForever',2,NULL),
+	(17,NULL,NULL,'sharp_header',1,NULL),
+	(18,NULL,NULL,'sharp_experience',2,NULL),
+	(19,NULL,NULL,'roxy_header',1,NULL),
+	(20,NULL,NULL,'Roxy_01',2,NULL),
+	(21,NULL,NULL,'7forAllmankind_header',2,NULL),
+	(22,NULL,NULL,'Amtrak_header',1,NULL),
+	(23,NULL,NULL,'Armorall_header',1,NULL),
+	(24,NULL,NULL,'ATT_Flick_header',1,NULL),
+	(25,NULL,NULL,'BCA_2013_header',1,NULL),
+	(26,NULL,NULL,'Chaps_header',1,NULL),
+	(27,NULL,NULL,'ChevySonic_header',1,NULL),
+	(28,NULL,NULL,'Daffys_header',1,NULL),
+	(29,NULL,NULL,'davidb_header',1,NULL),
+	(30,NULL,NULL,'Dennys_header',1,NULL),
+	(31,NULL,NULL,'Durex_header',1,NULL),
+	(32,NULL,NULL,'EUC_header',1,NULL),
+	(33,NULL,NULL,'Google_header',1,NULL),
+	(34,NULL,NULL,'Geico_piggy_header',1,NULL),
+	(35,NULL,NULL,'Geico_ventriloquist_header',1,NULL),
+	(36,NULL,NULL,'HeardCity_header',1,NULL),
+	(37,NULL,NULL,'HM_header',1,NULL),
+	(38,NULL,NULL,'ManVSFood_header',1,NULL),
+	(39,NULL,NULL,'munchkin_header',1,NULL),
+	(40,NULL,NULL,'NineWest_header',1,NULL),
+	(41,NULL,NULL,'Parliament_header',1,NULL),
+	(42,NULL,NULL,'Pedigree_header',1,NULL),
+	(43,NULL,NULL,'SailorJerry_header',1,NULL),
+	(44,NULL,NULL,'uniqlo_header',1,NULL),
+	(45,NULL,NULL,'Verizon_header',1,NULL),
+	(46,NULL,NULL,'Zyrtec',1,NULL),
+	(47,NULL,NULL,'att2_header',1,NULL),
+	(48,NULL,NULL,'Wendys_ANTHEM_BBQ_YT',2,NULL),
+	(49,NULL,NULL,'Welcome_to_VFILES_1',2,NULL),
+	(50,NULL,NULL,'SharpAppv4_final',2,NULL),
+	(51,'View Vine',NULL,'lowes/Beaver',1,'https://vine.co/v/O5KWXxVKiea'),
+	(52,'View Vine',NULL,'lowes/Bookshelve',1,'https://vine.co/v/O5KWXxVKiea'),
+	(53,'View Vine',NULL,'lowes/Car_Boost',1,'https://vine.co/v/O5KWXxVKiea'),
+	(54,'View Vine',NULL,'lowes/Firepit',1,'https://vine.co/v/O5KWXxVKiea'),
+	(55,'View Vine',NULL,'lowes/Goggles',1,'https://vine.co/v/O5KWXxVKiea'),
+	(56,'View Vine',NULL,'lowes/MC_ESCHER',1,'https://vine.co/v/O5KWXxVKiea'),
+	(57,'View Vine',NULL,'lowes/Popcorn',1,'https://vine.co/v/O5KWXxVKiea'),
+	(58,'View Vine',NULL,'lowes/Puff',1,'https://vine.co/v/O5KWXxVKiea'),
+	(59,'View Vine',NULL,'lowes/Ring_Of_Fire',1,'https://vine.co/v/O5KWXxVKiea'),
+	(60,'View Vine',NULL,'lowes/Santa',1,'https://vine.co/v/O5KWXxVKiea'),
+	(61,'View Vine',NULL,'lowes/Space_Invader',1,'https://vine.co/v/O5KWXxVKiea'),
+	(62,NULL,NULL,'skippy/Cat',3,NULL),
+	(63,NULL,NULL,'skippy/Emojis',3,NULL),
+	(64,NULL,NULL,'skippy/Lettering_Color',3,NULL),
+	(65,NULL,NULL,'skippy/Pineappleparty',3,NULL),
+	(66,NULL,NULL,'wendys/tumbler_1',3,NULL),
+	(67,NULL,NULL,'wendys/tumbler_2',3,NULL),
+	(68,NULL,NULL,'wendys/tumbler_3',3,NULL),
+	(69,NULL,NULL,'wendys/tumbler_4',3,NULL),
+	(70,NULL,NULL,'wendys/tumbler_5',3,NULL),
+	(71,NULL,NULL,'wendys/tumbler_6',3,NULL),
+	(72,NULL,NULL,'wendys/tumbler_7',3,NULL),
+	(73,NULL,NULL,'wendys/tumbler_8',3,NULL),
+	(74,NULL,NULL,'Lowes_Case_Study',2,NULL),
+	(75,'View Vine',NULL,'lowes/Flashlight',1,'https://vine.co/v/O5KWXxVKiea');
 
 /*!40000 ALTER TABLE `media` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -338,7 +393,8 @@ INSERT INTO `media_types` (`id`, `media_type_name`)
 VALUES
 	(1,'jpg'),
 	(2,'video'),
-	(3,'gif');
+	(3,'gif'),
+	(4,'png');
 
 /*!40000 ALTER TABLE `media_types` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -373,7 +429,7 @@ VALUES
 	(3,6,'skippy-yippee','Skippy','Spreading “Yippee!” Cheer Across the Universe','An interactive digital campaign for Skippy that people went nuts over.',NULL,'For this tasty challenge, Click 3X, ClickFire Media and BBDO Minneapolis came together to create the Skippy Yippee platform, an broadcast and interactive experience that allows users to spread joyful ‘yippee!’ moments across the universe. In a nutshell, the goal was to communicate the unlimited fun and variety found in every jar of our favorite peanut butter brand, Skippy.</p><p>To begin with, our team concepted, directed and produced a :15 and 0:30 second national television spot demonstrating the peanut selection process - that only the fun peanuts make it into a jar of Skippy Yippee. Custom illustration, animation, and seamless integration with live action footage, brought these unique and fun 3D peanut characters to life.</p><p>To further support the campaign, the “Yippee!” interactive experience was implemented across the peanutbutter.com website, Rich Media ad units and iADs to ensure the same happy experience across all digital devices and platforms. Our highly talented team of interactive Animators and Producers at ClickFire Media and BBDO Minneapolis created over 50 unique GIFS that were launched at the click of a “Fun Button.” Animation was shot in-house, making for a lively two weeks in our studios as as our creative teams set about creating one colorful yippee moment after another to spread happiness across the universe by clicking the “Fun Button.”</p><p>A tracking counter even allowed users to see how many “Yippee!” moments were being spread in real-time across the universe. But most importantly, over 14,000,000 yippee moments were spread throughout  our universe thanks to this campaign!</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>BBDO Minneapolis<br />\n<span class=\"description-label\">Credits:</span>Click3X, ClickFire Media and BBDO Minneapolis<br />\n<span class=\"description-label\">Platforms:</span>Broadcast, Digital and Media','skippy_yippie','skippy'),
 	(4,4,'vfiles-smashion','VFILES','Fashion? Smashion!','Social gaming platforms are à la mode, so we concepted and developed SMASHION! for VFILES.','Shop. Play. Share.</p><p>Working with one of the most influential digital platforms\nin today’s fashion realm, Raison D’Être collaborated with\nVFILES to conceptualize and develop a unique mobile\ngaming','What chic sophisticate hasn’t fantasized about donning a fashionable frock on the runway to compete with top models? Raison D’Etre and VFILES collaborated to bring this dream to fruition with an addictive mobile gaming application designed to complement the VFILES brand.</p><p>Just like the big names in Haute Couture, the goal for players is to compete on the runways of four major city’s fashion weeks. Featuring immersive storytelling and challenging gameplay, the app–built for iOS and Android devices–delivers an addictive experience in either landscape or portrait orientation.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>VFILES <br />\n<span class=\"description-label\">Credits:</span>Raison D’Être and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span> Mobile - iOS and Android','smashion','vfiles'),
 	(5,3,'bca-campaign','The Estée Lauder Companies','Hear Our Stories, Share Yours.','Unveiling two-way conversations to raise breast cancer awareness.','Raison D’Être, our beauty & fashion division, along with Click 3X collaborated with The Estée Lauder','In 2014 we were challenged  by our client The Estée Lauder Companies, to create a 360 campaign that would  inspire audiences to join the important conversation about breast cancer awareness.</p><p>Our response was to leverage the power of storytelling across the digital and social landscape by amplifying video content, and tailoring the topics of conversation to connect to a wider audience. With the call-to-action: “Hear our stories. Share yours,” Click3x Director Jonathan Yi and ClickFire Media brought together individuals, their families and supporters to capture a two-way conversation. Through authentic narrative and hours of moving footage, audiences learned that cancer is not a solitary struggle; it affects all of us. The hours of moving footage led to the creation of a campaign trailer and 27-minute documentary.</p><p>Users around the world visited the BCACampaign.com website, which was translated into 15 different languages, to share stories, photos, videos and opinions resulting in an aggregated live feed that engaged a global audience. The resulting metrics were astounding -  1,000,000 YouTube views, 2,000,000 social media impressions, and 16,000 moments of engagement demonstrating the power of storytelling to transcending location, space and time.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>The Estée Lauder Companies<br />\n<span class=\"description-label\">Credits:</span>Raison D’Être, Click3X and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Broadcast, Print, Digital and Social Media','bca','bca'),
-	(6,1,'lowes-vines','Lowes','Building Creativity','Our creative teams partnered with 3 top Viners to build 12 videos for the brand that’s about building.',NULL,'12 videos. 13.5 million loops. That’s what happens when you put Click 3X, 3 top Viners, and the Lowe’s brand in a room together.</p><p>BBDO wanted to promote Lowe’s Black Friday Sales and gave Click 3X two weeks to make it happen. We paired our in-house live action and animation teams with 3 of the nation’s top Viners, tasking them to create a premium shareable experience with high production values that fully exploited the stop-motion capabilities of the Vine platform.</p><p>At our NYC studios these two very different groups swapped technique and inspiration. It was the best of our experienced teams’ original ideas and expertise in production, combined with the irreverence of media-savvy of millennials, that generated  impressions and fresh new content.</p><p>The 12 spots that resulted became the most popular Lowe’s Vine campaign to date and have now been looped more than 13.5 million times.\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>Lowe\'s<br />\n<span class=\"description-label\">Credits:</span>BBDO, Click3X, Raison D\'Être and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Digital, Mobile, Video, Social Media - Vine','lowes_vines','lowes'),
+	(6,1,'lowes-vines','Lowes','Building Creativity','Our creative teams partnered with 3 top Viners to build 12 videos for the brand that’s about building.',NULL,'12 videos. 13.5 million loops. That’s what happens when you put Click 3X, 3 top Viners, and the Lowe’s brand in a room together.</p><p>BBDO wanted to promote Lowe’s Black Friday Sales and gave Click 3X two weeks to make it happen. We paired our in-house live action and animation teams with 3 of the nation’s top Viners, tasking them to create a premium shareable experience with high production values that fully exploited the stop-motion capabilities of the Vine platform.</p><p>At our NYC studios these two very different groups swapped technique and inspiration. It was the best of our experienced teams’ original ideas and expertise in production, combined with the irreverence of media-savvy of millennials, that generated  impressions and fresh new content.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>Lowe\'s<br />\n<span class=\"description-label\">Credits:</span>BBDO, Click3X, Raison D\'Être and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Digital, Mobile, Video, Social Media - Vine','lowes_vines','lowes'),
 	(7,7,'kmart-video','Kmart','Attention Kmart Shoppers','Creating shoppable experiences through interactive video and storytelling.',NULL,'We’re redefining the e-commerce landscape through interactive storytelling. In collaboration with DraftFCB Chicago, ClickFire Media was tasked with creating a shoppable e-commerce experience for Kmart that took advantage of new possibilities offered by HTML5 technology.</p><p>Immersive HTML5 video, backed by the track ‘Burning Hears’ by MNDR, tells the story of people living their daily lives in fashionable clothing. At predetermined hotspots the narrative pauses, to allow  users to interact with the individual items which are themselves seamlessly linked to Kmart’s e-commerce via their API. Dynamic overlays and a radically intuitive menu system streamline the experience, further immersing users in a story that feels worth watching for its own sake. At any time users may pause or continue, whether it be through the narrative or to the online catalog.</p><p>This cross-platform experience offers a glimpse of what’s possible when creative video production meets cutting-edge web development.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>Kmart<br />\n<span class=\"description-label\">Credits:</span>DraftFCB Chicago and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Desktop, Tablet and Mobile','kmart_video','kmart'),
 	(8,8,'gazprom','Gazprom International','A World Class Presentation App for a World Leader in Natural Gas Exploration','Translating complex business offerings into Simple User Interfaces.',NULL,'Gazprom International is one of the world’s leading natural gas resource corporations. We were tasked with the    to invent an exclusive mobile application to use to pitch to Heads of State, CEOs, and top management professionals. We responded by creating a visually powerful application that can be displayed both on the iPad, or transmitted to TV/Video via Apple TV.</p><p>The Gazprom International iPad App is a customizable app with a streamlined yet powerful interface, interactive 3D imagery, and branded integration of video. Ideal for presenting in conference rooms or on the fly, the app provides a unique storytelling experience where users can modify presets, filters or drag and drop content in order to tailor their presentation. News, updates and happenings were also included in the app, facilitating corporate communication and greater management efficiency. The Gazprom International App makes communicating complex business offerings simplified.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>Gazprom International<br />\n<span class=\"description-label\">Credits:</span>Fifteen Degrees and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Tablet - iPAD','gazprom','gazprom'),
 	(9,9,'mufe','Make Up For Ever','Augmenting Audiences through Augmented Reality','Make Up For Ever redefines the point-of-sale experience for its consumers.',NULL,'Make Up For Ever approached us with this unique challenge: create a point-of-sale experience to engage consumers and help them make the best purchase decisions.</p><p>In response, we utilized the tools of augmented reality technology to create a iOS and Android mobile application allowing consumers to scan a product image to learn about four different blush-application techniques.</p><p>The campaign was featured in kiosks throughout Sephora stores nationwide. The process was nothing to blush about. We designed copy and trigger images, shot and edited video portions of engagement, and developed the mobile application for consumers, bringing the experience to life. All media and video content was shot in-house, providing high-quality content. Overall, the project certainly added an innovative tint to the traditional point-of-sale experience.</p>\n\n<p class=\"credits\">\n<span class=\"description-label\">Client:</span>Make Up For Ever<br />\n<span class=\"description-label\">Credits:</span>Raison D’Être, Click3X and ClickFire Media<br />\n<span class=\"description-label\">Platforms:</span>Mobile - iOS and Android','mufe','mufe'),
@@ -390,7 +446,6 @@ VALUES
 	(20,20,'electrified','David Blaine','Electrified',NULL,NULL,NULL,'electrified','david_blaine'),
 	(21,21,'dennys','Denny\'s','Photo-a-day Challenge',NULL,NULL,NULL,'dennys','dennys'),
 	(22,22,'durex','Durex','Durex',NULL,NULL,NULL,'durex','durex'),
-	(23,23,'euc','EUC','At Home With Bear',NULL,NULL,NULL,'euc','euc'),
 	(24,24,'google','Google','Google Banners',NULL,NULL,NULL,'google','google'),
 	(25,25,'geico_piggy','Geico','Geico',NULL,NULL,NULL,'geico_piggy','geico'),
 	(26,26,'geico_ventrilouquist','Geico','Geico',NULL,NULL,NULL,'geico_ventriloquist','geico'),
@@ -459,7 +514,6 @@ VALUES
 	(29,20,29),
 	(30,21,30),
 	(31,22,31),
-	(32,23,32),
 	(33,24,33),
 	(34,25,34),
 	(35,26,35),
@@ -477,7 +531,11 @@ VALUES
 	(47,38,47),
 	(48,1,48),
 	(49,4,49),
-	(50,10,50);
+	(50,10,50),
+	(51,3,51),
+	(52,1,52),
+	(53,6,53),
+	(54,6,54);
 
 /*!40000 ALTER TABLE `projects_asset_lu` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -528,7 +586,6 @@ VALUES
 	(26,20,1),
 	(27,21,1),
 	(28,22,1),
-	(29,23,1),
 	(30,24,1),
 	(31,25,1),
 	(32,26,1),

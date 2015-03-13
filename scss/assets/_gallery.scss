@@ -7,18 +7,16 @@
 	}
 
  	div.cfm-project-gallery{
+ 		padding:0 0px;
+
+		@media(min-width:$tablet-small){
+			padding:0 20px;
+		}
+
 		ul{
 	 		li{
-	 			@media(min-width:$desktop-large){
-	 				width:25%;
-	 			}
-
 				div.project-inner{
 					padding:10px;
-
-					@media(min-width:$tablet-small){
-		 				
-		 			}
 
 		 			a{
 		 				div.project-label{
@@ -46,6 +44,18 @@
 			 				}
 		 				}
 	 				}	
+
+	 				&.hidelabel{
+	 					a{
+	 						cursor: default;
+
+	 						div.project-label{
+	 							div.project-label-inner{
+	 								display: none;
+	 							}
+	 						}
+	 					}
+	 				}
 	 			}
 	 		}
 	 	}
