@@ -82,7 +82,7 @@
                         </li>
                         <li id="p3" class="instagram-btn">
                             <div class="project-inner">
-                                <a target="_blank" href="https://instagram.com/click_3x">
+                                <a target="_blank" href="https://instagram.com/click.3x">
                                     <div class="project-label"><div class="project-label-inner"></div></div>
                                 </a>
                             </div>
