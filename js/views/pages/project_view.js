@@ -19,7 +19,7 @@ define([
 		loadprojectdetails:function(){
 			var _t = this;
 
-			ga( 'send', 'pageview', "/project/" + _t.model.get("detailslug") );
+			ga( 'send', 'pageview', _t.model.get("detailslug") );
 
 			$.ajax(
 		    {
