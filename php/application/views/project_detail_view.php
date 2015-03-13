@@ -45,7 +45,6 @@
             </div>
 		</div>
 	</div>
-	
 	<div class="project-assets-container">
 		<?php for($i = 1; $i<count($assets); $i++): $asset=$assets[$i] ?>
 			<div class="project-asset <?php echo $asset->asset_type_name; ?>">
@@ -54,5 +53,20 @@
 				</div>
 			</div>
 		<?php endfor; ?>
+	</div>
+</div>
+<div class="page-footer-navigation">
+	<div class="page-footer-inner">
+		<div class="cfm-project-naviation cfm-navigation">
+			<ul>
+				<li><a href="<?php echo base_url().$parent_slug; ?>" data-navigate-to="<?php echo $parent_slug; ?>" ><span class="line-arrow-left line-arrow"></span><?php echo $parent_slug == "home" ? 'Home' : 'Projects'; ?></a></li>
+				<?php if( !empty($next) ) : ?>
+				<li class="next-button"><a href="<?php echo base_url(). $category_slug. '/' . $next; ?>" data-navigate-to="<?php echo $category_slug. '/' . $next; ?>" ><span class="line-arrow-right line-arrow"></span></a></li>
+				<?php endif; ?>
+				<?php if( !empty($previous) ) : ?>
+				<li class="previous-button"><a href="<?php echo base_url(). $category_slug. '/' . $previous; ?>" data-navigate-to="<?php echo $category_slug. '/' . $previous; ?>" ><span class="line-arrow-left line-arrow"></span></a></li>
+				<?php endif; ?>
+			</ul>
+		</div>
 	</div>
 </div>

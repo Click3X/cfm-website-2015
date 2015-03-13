@@ -74,6 +74,8 @@ define([
             	e.preventDefault();
 	            $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
 	        });
+
+	        this.buildprojectgalleries();
 		},
 		onclose:function(){
 		},

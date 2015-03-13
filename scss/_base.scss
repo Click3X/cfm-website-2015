@@ -189,10 +189,10 @@ a:hover{
 	padding-top:54px;
 	background-color:#FFF;
 
-	.page-header-navigation{
+	.page-header-navigation, .page-footer-navigation{
 		background-color: rgba(240,240,240,1);
 
-		.page-header-inner{
+		.page-header-inner, .page-footer-inner{
 			padding:12px 20px 6px 20px;
 			
 			@media( min-width:$tablet-small){
