@@ -89,7 +89,7 @@
                         </li>
                     </ul>
                 </div>
-                <p>212.627.1900<br />16 W 22nd Street 4th Floor, New York, NY 10010<br /><a href="mailto:info@reason2be.com">info@clickfiremedia.com</a></p>
+                <p>212.627.1900<br />16 W 22nd Street 4th Floor, New York, NY 10010<br /><a href="mailto:info@reason2be.com" target="_blank">info@clickfiremedia.com</a></p>
                 <div id="mobile-menu" class="cfm-navigation mobile-menu">
                     <div class="mobile-menu-inner">
                         <ul>
