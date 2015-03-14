@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="page-labels"><ul><li data-page-id="projects">WORK</li><li data-page-id="project">WORK</li><li data-page-id="about">ABOUT</li></ul></div>
+                    <div id="page-labels"><ul><li data-page-id="projects">OUR WORK</li><li data-page-id="project">OUR WORK</li><li data-page-id="about">ABOUT</li></ul></div>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
                     <div class="mobile-menu-inner">
                         <ul>
                             <li><a data-navigate-to="home" href="<?= base_url(); ?>home"><h1>HOME</h1></a></li>
-                            <li><a data-navigate-to="projects" href="<?= base_url(); ?>projects"><h1>WORK</h1></a></li>
+                            <li><a data-navigate-to="projects" href="<?= base_url(); ?>projects"><h1>OUR WORK</h1></a></li>
                             <li><a data-navigate-to="about" href="<?= base_url(); ?>home"><h1>ABOUT</h1></a></li>
                             <li><a href="http://www.click3x.com/people/clickfire_media" ><h1>PEOPLE</h1></a></li>
                             <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
