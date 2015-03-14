@@ -305,7 +305,7 @@ div.section-header{
 
 	h2{
 		text-transform: uppercase;
-		font-family: "gotham-bold";
+		font-family: "gotham-book";
 		font-size: 19px;
 		line-height: 24px;
 		color: #CCC;
@@ -333,8 +333,6 @@ div.cfm-project-gallery{
  				a{
  					background-size:100.5%;
  					background-color: #FFF;
-
- 					@include prefix( "transition", background .25s ease-in-out );
 
  					div.project-label{
  						background-color:rgba(255,255,255,.95);
@@ -370,9 +368,6 @@ div.cfm-project-gallery{
 					}
 
 					&:hover{
- 						// background-blend-mode:multiply;
- 						// background-size:105%;
-
 						div.project-label{
 							opacity: 1;
 

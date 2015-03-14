@@ -1,7 +1,8 @@
 define([
 	'backbone',
-    'modules/videoplayer/views/videoplayer-controls_view'
-], function( Backbone , VideoPlayerControlsView ){
+    'modules/videoplayer/views/videoplayer-controls_view',
+    'modules/bg_image_view'
+], function( Backbone , VideoPlayerControlsView , BgImageView){
     var VideoPlayerView = Backbone.View.extend({
         hasplayed:false,
         initialize:function(options){
@@ -175,20 +176,19 @@ define([
                 _t.video.currentTime = 0;
                 if(_t.controls) _t.controls.ontimeupdate(0);
 
-                _t.video.currentTime = 0;
-                if(_t.controls) _t.controls.ontimeupdate(0);
+                // _t.video.currentTime = 0;
+                // if(_t.controls) _t.controls.ontimeupdate(0);
 
-                setTimeout(function(){
-                    _t.autoplay         = false;
-                    _t.loop             = false;
-                    _t.nocontrols       = false;
-                    _t.hasplayed        = false;
+                // setTimeout(function(){
+                //     _t.autoplay         = false;
+                //     _t.loop             = false;
+                //     _t.nocontrols       = false;
 
-                    _t.$el.removeClass("loop");
-                    _t.$el.removeClass("autoplay");
-                    _t.$el.removeClass("nocontrols");
-                    _t.$el.removeClass("paused");
-                },500);
+                //     _t.$el.removeClass("loop");
+                //     _t.$el.removeClass("autoplay");
+                //     _t.$el.removeClass("nocontrols");
+                //     _t.$el.removeClass("paused");
+                // },500);
             }
         },
         toPausedState:function(){
@@ -208,15 +208,12 @@ define([
             if(this.controls) this.controls.toPlayingState();
         },
         loadposter:function( _url ){
-            var _t = this, img = new Image();
+            var _t = this;
 
-            img.onload = function(){
-                $( _t.poster ).attr( "style", "background-image:url(" + _url + ")" );
-
+            _t.posterimage = new BgImageView({ el:_t.poster, image_url:_url });
+            _t.posterimage.on("ready",function(){
                 _t.model.set( "ready", true );
-            }   
-
-            img.src = _url;
+            });
         }
     });
 

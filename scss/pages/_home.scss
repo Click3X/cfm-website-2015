@@ -26,43 +26,52 @@
 	 		}
 	 	}
 	 }
-}
+	 #reel-video.section-header{
+	 	background-color:#eee;
 
-html:not(.mobile){
-	#home-page{
-	 	#reel-videoplayer.cfm-videoplayer{
-			video{
-				background:#EEE;
+	 	h3{
+	 		color: #aaa;
+	 	}
+	 }
+	 #reel-videoplayer.cfm-videoplayer{
+		video{
+			background:rgba(240,240,240,.5);
+			color:#555;
+		}
+
+		.cfm-videoplayer-poster{
+			background-color: #FFF;
+			background-size:80%;
+			background-position:center center;
+
+			@media(min-width:$tablet-large){
+				background-size:initial;
 			}
 
-			.cfm-videoplayer-poster{
-				background-color: #FFF;
-				background-size:70%;
-				background-position:50% top;
+			.cfm-videoplayer-playbutton{
+				border:1px solid $cfmred;
 
-				@media(min-width:$tablet-small){
-					background-size:initial;
+				span.arrow{
+					border-left-color: $cfmred;
 				}
+			}
 
+			&:hover{
 				.cfm-videoplayer-playbutton{
-					border:1px solid $cfmred;
-
+					border:1px solid #555;
+					background-color:#FFF;
+					
 					span.arrow{
-						border-left-color: $cfmred;
-					}
-				}
-
-				&:hover{
-					.cfm-videoplayer-playbutton{
-						border:1px solid #555;
-						background-color:#FFF;
-						
-						span.arrow{
-							border-left-color: #555;
-						}
+						border-left-color: #555;
 					}
 				}
 			}
 		}
+	}
+}
+
+html:not(.mobile){
+	#home-page{
+	 	
  	}
 }
