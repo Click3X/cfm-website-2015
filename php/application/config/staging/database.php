@@ -47,11 +47,10 @@
 
 $active_group = 'default';
 $active_record = TRUE;
-
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'cfm2015';
-$db['default']['password'] = 'cfm2015';
-$db['default']['database'] = 'cfm';
+$db['default']['username'] = 'sitesadmin';
+$db['default']['password'] = 'Click3x22';
+$db['default']['database'] = 'cfm_staging';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

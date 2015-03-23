@@ -11,27 +11,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <!-- icons -->
-        <link rel="shortcut icon" href="<?= base_url(); ?>favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="<?= base_url(); ?>apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="<?= base_url(); ?>apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url(); ?>apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url(); ?>apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url(); ?>apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="<?= base_url(); ?>apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="<?= base_url(); ?>apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="<?= base_url(); ?>apple-touch-icon-152x152.png" />
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="<?php echo base_url(); ?>apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url(); ?>apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url(); ?>apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url(); ?>apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url(); ?>apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(); ?>apple-touch-icon-152x152.png" />
         <!-- end icons -->
 
-        <link rel="stylesheet" href="<?= base_url(); ?>css/main.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>css/main.css">
 
-        <script src="<?= base_url(); ?>js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="<?= base_url(); ?>js/master.js"></script>
+        <script src="<?php echo base_url(); ?>js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="<?php echo base_url(); ?>js/master.js"></script>
         <script type="text/javascript">
-            var base_url    = "<?= base_url(); ?>";
-            var root_dir    = "<?= $this->config->item('root_directory'); ?>";
-            var debug       = "<?= $this->config->item('debug'); ?>";
+            var base_url    = "<?php echo base_url(); ?>";
+            var root_dir    = "<?php echo $this->config->item('root_directory'); ?>";
+            var debug       = "<?php echo $this->config->item('debug'); ?>";
         </script>
-        <!--[if (lt IE 9)]><!--><script src="<?= base_url(); ?>js/vendor/respond.min.js"></script><!--<![endif]-->
+        <!--[if (lt IE 9)]><!--><script src="<?php echo base_url(); ?>js/vendor/respond.min.js"></script><!--<![endif]-->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaTC6YnzPequMZihfh2Cbdr6CjcrhvE_k"></script>
         <script src="//use.typekit.net/hqh3atb.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -42,7 +42,7 @@
         <div id="site-wrapper" class="site-wrapper">
             <div id="header-container">
                 <div class="header-inner">
-                    <div id="logo" class="logo"><a href="<?= base_url(); ?>"></a></div>
+                    <div id="logo" class="logo"><a href="<?php echo base_url(); ?>"></a></div>
                     <div id="hamburger" class="hamburger">
                         <div class="hamburger-inner">
                             <a>
@@ -93,9 +93,9 @@
                 <div id="mobile-menu" class="cfm-navigation mobile-menu">
                     <div class="mobile-menu-inner">
                         <ul>
-                            <li><a data-navigate-to="home" href="<?= base_url(); ?>home"><h1>HOME</h1></a></li>
-                            <li><a data-navigate-to="projects" href="<?= base_url(); ?>projects"><h1>OUR WORK</h1></a></li>
-                            <li><a data-navigate-to="about" href="<?= base_url(); ?>home"><h1>ABOUT</h1></a></li>
+                            <li><a data-navigate-to="home" href="<?php echo base_url(); ?>home"><h1>HOME</h1></a></li>
+                            <li><a data-navigate-to="projects" href="<?php echo base_url(); ?>projects"><h1>OUR WORK</h1></a></li>
+                            <li><a data-navigate-to="about" href="<?php echo base_url(); ?>home"><h1>ABOUT</h1></a></li>
                             <li><a href="http://www.click3x.com/people/clickfire_media" ><h1>PEOPLE</h1></a></li>
                             <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
                         </ul>
@@ -104,14 +104,14 @@
             </div>
         </div>
 
-        <script data-main="<?= base_url();?>js/main" src="<?= base_url();?>js/vendor/require.min.js"></script>
+        <script data-main="<?php echo base_url();?>js/main" src="<?php echo base_url();?>js/vendor/require.min.js"></script>
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create',"<?= $this->config->item('ga_account');?>");ga('send','pageview');
+            ga('create',"<?php echo $this->config->item('ga_account');?>");ga('send','pageview');
         </script>
     </body>
 </html>
