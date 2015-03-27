@@ -1,5 +1,5 @@
 <div id="home-page" class="page-content-inner">
-	<div id="intro-video" class="cfm-videoplayer" nocontrols autoplay loop data-video-name="<?php echo base_url(); ?>video/cfm_intro" data-poster="<?php echo base_url(); ?>img/assets/video_posters/CFM_Intro.jpg">
+	<div id="intro-video" class="cfm-videoplayer" nocontrols autoplay loop data-video-name="<?php echo base_url(); ?>video/cfm_intro" data-poster="http://media.click3x.com/images/cfm/modules/banner-video/CFM_Intro.jpg">
 	    <div class="cfm-videoplayer-inner">
 	    	<div class="video-anchor-link"><a href="#reel-video"><span class="label">Watch Our Reel</span><span class="arrow"></span></a></div>
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
@@ -39,7 +39,7 @@
 	<div id="reel-video" class="section-header">
 		<h2>OUR 2015 REEL</h2>
 	</div>
-	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="<?php echo base_url(); ?>img/assets/video_posters/CFM_Reel.gif">
+	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="http://media.click3x.com/images/cfm/modules/banner-video/CFM_Reel.gif">
 	    <div class="cfm-videoplayer-inner">
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
             <div class="cfm-videoplayer-poster">

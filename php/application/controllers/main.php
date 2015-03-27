@@ -56,7 +56,7 @@ class Main extends CI_Controller {
 		$project_data = $this->projects_model->get( array( "slug"=>$_detailslug ) );
 		$project_data = $project_data[0];
 
-		$assets = $this->projects_model->getassets( $project_data->id );
+		$modules = $this->projects_model->getmodules( $project_data->id );
 		$links = $this->projects_model->getlinks( $project_data->id );
 
 		$nextrecord = $this->projects_model->nextproject( $project_data->id, $_category_slug );
@@ -75,7 +75,7 @@ class Main extends CI_Controller {
 			"data"=>$project_data, 
 			"previous"=>$previousrecord, 
 			"next"=>$nextrecord, 
-			"assets"=>$assets, 
+			"modules"=>$modules, 
 			"links"=>$links,
 			"client_logo"=>$client_logo
 		);

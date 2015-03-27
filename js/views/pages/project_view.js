@@ -69,7 +69,7 @@ define([
 			});
 
 			//build banner asset images
-			this.$el.find(".project-asset-image").each(function(){
+			this.$el.find(".project-module-image").each(function(){
 				_t.banners.push( new BgImageView({ el:this }) );
 			});
 
