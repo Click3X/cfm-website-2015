@@ -30,7 +30,7 @@
 	</div>
 	<div class="project-about">
 		<div class="project-about-inner">
-			<div class="project-module-image project-logo" data-image="<?php echo $client_logo; ?>"></div>
+			<div class="project-module-image project-logo" data-image="http://media.click3x.com/images/cfm/client_logos/<?php echo $data->client_logo; ?>.jpg"></div>
 			<div class="project-description">
 				<div class="project-description-inner">
 					<?php 

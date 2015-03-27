@@ -65,19 +65,12 @@ class Main extends CI_Controller {
 		$previousrecord = $this->projects_model->previousproject( $project_data->id, $_category_slug );
 		if($previousrecord) $previousrecord = $previousrecord->slug;
 
-		if( !empty( $project_data->client_logo ) ){
-			$client_logo = base_url()."img/client_logos/".$project_data->client_logo.".jpg";
-		} else {
-			$client_logo = "http://placehold.it/410/111111/EEEEEE&text=LOGO";
-		}
-
 		return array( 
 			"data"=>$project_data, 
 			"previous"=>$previousrecord, 
 			"next"=>$nextrecord, 
 			"modules"=>$modules, 
-			"links"=>$links,
-			"client_logo"=>$client_logo
+			"links"=>$links
 		);
 	}
 
