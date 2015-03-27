@@ -26,7 +26,7 @@
 	<div class="cfm-project-gallery">
 		<ul>
 			<?php foreach ($featured_projects as $key => $project): ?>
-			<li data-id="<?php echo $project->id; ?>" data-image="<?php echo base_url().'img/project_thumbnails/'.$project->thumbnail_image.'.jpg'; ?>">
+			<li data-id="<?php echo $project->id; ?>" data-image="http://media.click3x.com/images/<?php echo SITE; ?>/project_thumbnails/'.$project->thumbnail_image.'.jpg'; ?>">
 				<div class="project-inner">
 					<a class="cfm-project" href="<?php echo base_url().'featured/'.$project->slug; ?>" data-navigate-to="featured/<?php echo $project->slug; ?>">
 						<div class="project-label"><div class="project-label-inner"><h2><?php echo $project->title; ?></h2></div></div>
