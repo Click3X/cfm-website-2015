@@ -49,20 +49,20 @@ class Projects_Model extends C3X_Model
     function nextproject($pid, $category_slug, $pdate){
         $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' ORDER BY date_created ASC,`order` DESC LIMIT 1 ");
         $result = $query->result();
-        echo 'NEXT: ';
-        echo '<pre>';
-        print_r($result);
-        echo '</pre>';
+        // echo 'NEXT: ';
+        // echo '<pre>';
+        // print_r($result);
+        // echo '</pre>';
         return !empty( $result ) ? $result[0] : array();
     }
 
     function previousproject($pid, $category_slug, $pdate){
         $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' ORDER BY date_created DESC,`order` ASC LIMIT 1");
         $result = $query->result();
-        echo 'PREV: ';
-        echo '<pre>';
-        print_r($result);
-        echo '</pre>';
+        // echo 'PREV: ';
+        // echo '<pre>';
+        // print_r($result);
+        // echo '</pre>';
         return !empty( $result ) ? $result[0] : array();
     }
 }
