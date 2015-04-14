@@ -59,10 +59,10 @@ class Main extends CI_Controller {
 		$modules = $this->projects_model->getmodules( $project_data->id );
 		$links = $this->projects_model->getlinks( $project_data->id );
 
-		$nextrecord = $this->projects_model->nextproject( $project_data->id, $_category_slug );
+		$nextrecord = $this->projects_model->nextproject( $project_data->id, $_category_slug, $project_data->date_created  );
 		if($nextrecord) $nextrecord = $nextrecord->slug;
 
-		$previousrecord = $this->projects_model->previousproject( $project_data->id, $_category_slug );
+		$previousrecord = $this->projects_model->previousproject( $project_data->id, $_category_slug, $project_data->date_created );
 		if($previousrecord) $previousrecord = $previousrecord->slug;
 
 		return array( 
