@@ -24,7 +24,7 @@ class Projects_Model extends C3X_Model
 	}
 
     function getbycategory( $category = "casestudy" ){
-        $query = $this->db->query("SELECT * FROM ( SELECT category_name,category_id,project_id FROM project_category_lu CROSS JOIN categories ON categories.id = project_category_lu.category_id AND category_name = '".$category."' ) AS filtered_lu LEFT JOIN projects ON projects.id = project_id ORDER BY `date_created` DESC ");
+        $query = $this->db->query("SELECT * FROM ( SELECT category_name,category_id,project_id FROM project_category_lu CROSS JOIN categories ON categories.id = project_category_lu.category_id AND category_name = '".$category."' ) AS filtered_lu LEFT JOIN projects ON projects.id = project_id ORDER BY date_created DESC,`order` ASC ");
         return $query->result();
     }
 
@@ -47,7 +47,7 @@ class Projects_Model extends C3X_Model
     }
 
     function nextproject($pid, $category_slug, $pdate){
-        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created > '".$pdate."' ORDER BY date_created LIMIT 1");
+        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' ORDER BY date_created AND date_created > '".$pdate."' ASC,`order` DESC LIMIT 1 ");
         $result = $query->result();
         echo 'NEXT: ';
         echo '<pre>';
@@ -57,7 +57,7 @@ class Projects_Model extends C3X_Model
     }
 
     function previousproject($pid, $category_slug, $pdate){
-        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' AND date_created < '".$pdate."' ORDER BY date_created DESC LIMIT 1");
+        $query = $this->db->query("SELECT slug,project_id FROM projects LEFT JOIN project_category_lu ON projects.id=project_category_lu.project_id LEFT JOIN categories ON categories.id=project_category_lu.category_id WHERE category_name='".$category_slug."' ORDER BY date_created AND date_created < '".$pdate."' DESC,`order` ASC LIMIT 1");
         $result = $query->result();
         echo 'PREV: ';
         echo '<pre>';
