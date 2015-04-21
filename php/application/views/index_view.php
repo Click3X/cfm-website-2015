@@ -53,7 +53,7 @@
                             </a>
                         </div>
                     </div>
-                    <div id="page-labels"><ul><li data-page-id="projects">OUR WORK</li><li data-page-id="project">OUR WORK</li><li data-page-id="about">ABOUT</li></ul></div>
+                    <div id="page-labels"><ul><li data-page-id="projects"><a href="<?php echo base_url(); ?>projects">OUR WORK</a></li><li data-page-id="project"><a href="<?php echo base_url(); ?>projects">OUR WORK</a></li><li data-page-id="about"><a href="<?php echo base_url(); ?>about">ABOUT</a></li></ul></div>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
                         </li>
                     </ul>
                 </div>
-                <p>212.627.1900<br />16 W 22nd Street 4th Floor, New York, NY 10010<br /><a href="mailto:info@reason2be.com" target="_blank">info@clickfiremedia.com</a></p>
+                <p>212.627.1900<br />16 W 22nd Street 4th Floor, New York, NY 10010<br /><a href="mailto:info@clickfiremedia.com" target="_blank">info@clickfiremedia.com</a></p>
                 <div id="mobile-menu" class="cfm-navigation mobile-menu">
                     <div class="mobile-menu-inner">
                         <ul>

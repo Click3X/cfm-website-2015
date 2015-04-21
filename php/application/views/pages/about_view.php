@@ -4,7 +4,7 @@
 		<div class="page-header-description">
 			<p>ClickFire Media is a digital production agency headquartered in Flatiron, within the pulsing heart of New York City. Born from award-winning studio Click3X, we exist at the intersection of entertainment, advertising and technology.</p>
 	 		<p>Headquartered in a 23,000 square foot state-of-the-art studio, our impressive in-house resources allow us to incorporate everything from live action, animation, sound design and visual FX into digital experiences that create purposeful solutions for agencies and brands with a mobile-first approach.</p>
-			<p>Our expert team consists of a diverse group of over 100 multi-talented individuals who embody left- and right brain disciplines. We are Strategists, Information Architects, UX Designers, Visual Effect Specialists, Animators, Creative Technologists, Editors, Directors and Producers.</p>
+			<!-- <p>Our expert team consists of a diverse group of over 100 multi-talented individuals who embody left- and right brain disciplines. We are Strategists, Information Architects, UX Designers, Visual Effect Specialists, Animators, Creative Technologists, Editors, Directors and Producers.</p> -->
 			<p>Our approach is to fuel curiosity, spark conversation and direct change; ultimately shaping the digital landscape by creating original, solutions-driven experiences for our clients.</p>
 			<p>Why not <a href="mailto:info@clickfiremedia.com" target="_blank">start a conversation</a> with us today.</p>
 		</div>	
