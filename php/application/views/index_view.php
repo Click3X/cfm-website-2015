@@ -98,6 +98,7 @@
                             <li><a data-navigate-to="about" href="<?php echo base_url(); ?>home"><h1>ABOUT</h1></a></li>
                             <li><a href="http://www.click3x.com/people/clickfire_media" ><h1>PEOPLE</h1></a></li>
                             <li><a href="http://www.click3x.com/contact"><h1>CONTACT</h1></a></li>
+                            <li><a href="http://www.click3x.com" id="click3x-tab"><h1>CLICK 3X</h1></a></li>
                         </ul>
                     </div>
                 </div>
