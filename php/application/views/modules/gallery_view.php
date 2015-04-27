@@ -1,5 +1,5 @@
 <div id="<?php echo $data->slug; ?>-gallery" class="project-module-description">
-	<div class="project-module-description-inner">
+	<div class="project-module-description-inner" id="<?php echo ($data->slug . '-' . $module->module_id) ?>">
 		<h3><?php echo $module->heading; ?></h3>
 		<h2><?php echo $module->subhead; ?></h2>
 		<p><?php echo $module->description; ?></p>
