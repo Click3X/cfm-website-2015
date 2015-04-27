@@ -8,7 +8,7 @@ define([
     initialize:function(){
       var _t = this;
     },
-    activatePageById:function( _id, _detailslug ){
+    activatePageById:function( _id, _detailslug, moduleslug ){
       console.log( "activatePageById: ", _id );
       
   		var _m = this.get( _id );
@@ -19,12 +19,12 @@ define([
       /*--- silently deactivate curretly active model(s) -----
       -------------------------------------------------------*/
       _.each(_active, function( _model ){
-         _model.set( { "active":false, "silent":true, "detailslug":null } );
+         _model.set( { "active":false, "silent":true, "detailslug":null, "moduleslug":null } );
       });
       
       /*---- remove silent and activate selected model -------
       -------------------------------------------------------*/
-      _m.set( { "active":true, "silent":false, "detailslug":_detailslug } );
+      _m.set( { "active":true, "silent":false, "detailslug":_detailslug, "moduleslug":moduleslug } );
     }
   });
 

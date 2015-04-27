@@ -47,11 +47,12 @@ define([
       Backbone.history.start( {pushState: pushstate ? true : false, hashChange:true, silent:false, root:root_dir} );
     },
     routes: {
+      ':pageid/:id/:module'   : 'onchangepage',
       ':pageid/:id'           : 'onchangepage',
       ':pageid'               : 'onchangepage',
       '*actions'              : 'onchangepage'
     },
-    onchangepage:function(_pageid, _detailslug){
+    onchangepage:function(_pageid, _detailslug, _moduleslug){
       var _t = this;
 
       !_pageid ? _pageid = "home" : null;
@@ -63,7 +64,7 @@ define([
       $("#footer-container").css("opacity",0);
       if( !firstpage ) $("#page-container").css( {opacity:0} );
       
-      _t.page_collection.activatePageById( _pageid, _detailslug );
+      _t.page_collection.activatePageById( _pageid, _detailslug, _moduleslug );
       
       if( firstpage ) firstpage = false;
 

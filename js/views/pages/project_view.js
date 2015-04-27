@@ -91,6 +91,9 @@ define([
 			        return this; // for chaining...
 			    }
 			})(jQuery);
+
+			if( _t.model.get("moduleslug") )
+	        	$("#"+_t.model.get("moduleslug")).goTo();
 		},
 
 		onclose:function(){
