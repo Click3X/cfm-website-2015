@@ -41,7 +41,7 @@
 	<div id="reel-video" class="section-header">
 		<h2>OUR 2015 REEL</h2>
 	</div>
-	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/011315_CFM_REEL" data-poster="http://media.click3x.com/images/cfm/modules/banner-video/CFM_Reel.gif">
+	<div id="reel-videoplayer" class="cfm-videoplayer" data-video-name="http://media.click3x.com/video/CFM_REEL_CS_CFM_2015" data-poster="http://media.click3x.com/images/cfm/modules/banner-video/CFM_Reel.gif">
 	    <div class="cfm-videoplayer-inner">
             <video class="cfm-videoplayer-mobile" width="960" height="540" controls></video>
             <div class="cfm-videoplayer-poster">

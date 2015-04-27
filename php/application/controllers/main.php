@@ -20,6 +20,7 @@ class Main extends CI_Controller {
 		$viewdata["page_id"] = "project";
 		$viewdata["category_slug"] = $category_slug; 
 		$viewdata["parent_slug"] = $parent_slug;
+		// $viewdata["module_id"] = $module_id;
 
 		$this->load->view("index_view", $viewdata );
 	}

@@ -75,11 +75,24 @@ define([
 
 			this.$el.find('a[href*=#]').click(function(e){     
             	e.preventDefault();
-	            $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
+            	// for firefox
+            	var target = $(this).attr('href');
+				$(target).goTo();
+	            // $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
 	        });
 
 	        this.buildprojectgalleries();
+
+	        (function($) {
+			    $.fn.goTo = function() {
+			        $('html, body').animate({
+			            scrollTop: ( $(this).offset().top ) + 'px'
+			        }, 'slow');
+			        return this; // for chaining...
+			    }
+			})(jQuery);
 		},
+
 		onclose:function(){
 			$.each(this.banners,function(){
 				this.remove();

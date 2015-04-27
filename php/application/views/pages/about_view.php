@@ -28,10 +28,7 @@
 				<li>Social Media Integration</li>
 			</ul>
 		</div>
-		<div class="services-section">
-			<h2>Digital Marketing & Advertising</h2>
-		</div>
- 		<div class="services-section">
+		 <div class="services-section">
 			<h2>Mobile</h2>
 			<ul>
 				<li>Application Development</li></li>
@@ -42,15 +39,6 @@
 		</div>
 		<div class="services-section">
 			<h2>Interactive & UX Design</h2>
-		</div>
-	 	<div class="services-section">
-			<h2>Social Media</h2>
-			<ul>
-				<li>Application Development</li>
-				<li>Content Strategy & Planning</li>
-				<li>Community Management</li>
-				<li>Campaign Activations</li>
-			</ul>
 		</div>
 		<div class="services-section">
 			<h2>Information Architecture</h2>
@@ -68,5 +56,20 @@
 				<li>Content Development</li>
 			</ul>
 		</div>
+		<div class="services-section">
+			<h2>Digital Marketing & Advertising</h2>
+		</div>
+
+	 	<div class="services-section">
+			<h2>Social Media</h2>
+			<ul>
+				<li>Application Development</li>
+				<li>Content Strategy & Planning</li>
+				<li>Community Management</li>
+				<li>Campaign Activations</li>
+			</ul>
+		</div>
+
+
 	</div>
 </div>

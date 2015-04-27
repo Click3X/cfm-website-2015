@@ -43,9 +43,12 @@ define([
 				router.navigate( this.getAttribute("data-navigate-to"),true );
 			});
 
-			this.$el.find('a[href*=#]').click(function(e){     
+	        this.$el.find('a[href*=#]').click(function(e){     
             	e.preventDefault();
-	            $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
+            	// for firefox
+            	var target = $(this).attr('href');
+				$(target).goTo();
+	            // $('body').animate( {scrollTop: ($(this.hash).offset().top-33) + "px"} , 500);
 	        });
 
 			this.onready();
@@ -54,6 +57,15 @@ define([
 			$("#footer-container").delay(700).animate({opacity:1},400);
 
 			console.log("page ready");
+
+			(function($) {
+			    $.fn.goTo = function() {
+			        $('html, body').animate({
+			            scrollTop: ( $(this).offset().top ) + 'px'
+			        }, 'slow');
+			        return this; // for chaining...
+			    }
+			})(jQuery);
 		},
 		buildprojectgalleries:function(){
 			console.log("build project galleries");

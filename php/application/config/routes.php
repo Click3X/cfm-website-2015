@@ -50,7 +50,9 @@ $route['template/projects.php'] 		= 'main/pagetemplate/projects/project';
 $route['template/(:any).php'] 			= 'main/pagetemplate/$1';
 
 /* page routes */
+$route['project/(:any)/(:any)'] 		= 'main/projectdetail/$1/project/projects/$2';
 $route['project/(:any)'] 				= 'main/projectdetail/$1/project/projects';
+
 $route['featured/(:any)'] 				= 'main/projectdetail/$1/featured/home';
 $route['projects'] 						= 'main/index/projects/project';
 $route['(:any)'] 						= 'main/index/$1';
