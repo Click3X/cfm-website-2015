@@ -349,7 +349,6 @@ div.cfm-project-gallery{
 	 						padding:40px;
 
 							@media( min-width:$tablet-small){ padding:5px; }
-				 			@media( min-width:$tablet-large){ padding:5px; }
 
  							@include prefix( "transform", scale(1.2) );
  							@include prefix( "transition", transform .25s ease-in-out );
