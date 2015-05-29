@@ -51,8 +51,12 @@
 	.people-overlay-inner {
 		// overflow-y: scroll;
 		position:relative;
-		padding: 120px 20%;
+		padding: 100px 20%;
 		color: #fff;
+
+		@media(max-width: $tablet-large) {
+			padding: 60px 10%;
+		}
 
 		.people-name, .people-title {
 			opacity: .96;
@@ -79,7 +83,7 @@
 			height: 40px;
 			position: absolute;
 			right: 1%;
-			top: 120px;
+			top: 100px;
 			overflow: hidden;
 			border: none;
 			background: url(../img/cross.png) no-repeat center center;
@@ -88,6 +92,10 @@
 			color: black;
 			outline: none;
 			z-index: 100;
+
+			@media(max-width: $tablet-large) {
+				top: 10px;
+			}
 		}
 	}
 
